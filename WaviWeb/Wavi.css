@@ -1,0 +1,74 @@
+/* CSS Document */
+html, body {
+	height: 95%;
+}
+
+#outer_body {
+	background-color: #42AFCB;
+	display: flex;
+	justify-content: center;
+	align-content: center;
+	padding: 34px;
+}
+
+#inner_body {
+	background-color: #92B9CA;
+	flex-grow: 1;
+	
+	display: flex;
+}
+
+#toolbar {
+	background-color: #707D7A;
+	width: 68px;
+}
+
+#inner_content {
+	flex-grow: 1;
+	
+	display: flex;
+	flex-direction: column;
+}
+
+#page_title {
+	margin-top: 68px;
+	margin-left: 68px;
+	
+	color: #FFFFFF;
+	
+	font-family: Segoe, "Segoe UI", "DejaVu Sans", "Trebuchet MS", Verdana, "sans-serif";
+	font-size: 64px;
+}
+
+#boxes {
+	background-color: #000000;
+	flex-grow: 1;
+	
+	display: flex;
+	
+	margin-left: 68px;
+	margin-right: 68px;
+	margin-top: 34px;
+}
+
+#song_box {
+	background-color: #FFFFFF;
+	flex-grow: 1;
+	margin-right: 34px;
+}
+
+#info_box {
+	background-color: #FFFFFF;
+	flex-grow: 1;
+	margin-left: 34px;
+}
+
+#player {
+	margin-left: 68px;
+	margin-right: 68px;
+	margin-top: 34px;
+	margin-bottom: 34px;
+	background-color: #FFFFFF;
+	
+	height: 128px;
+}
