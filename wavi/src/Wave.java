@@ -185,6 +185,13 @@ public class Wave {
             out.flush();
 
             byte[] result = out.toByteArray();
+            StringBuilder s = new StringBuilder();
+            s.append("[");
+            for (int i = 0; i < result.length - 1 ; i++) {
+                s.append(result[i] + ",");
+            }
+            s.append(result[result.length - 1]);
+            s.append("]");
 
             int shift = result[0];
 

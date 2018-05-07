@@ -10,18 +10,22 @@
       MyTestScript = function(){};
       MyTestScript.prototype.onGWTReady = function()
       {
-         var foo = new com.acme.Foo();
+         var foo = new jwave.acme.Foo();
          foo.x = 40;
          foo.y = 2;
                                        // will return 42!                    //
          var z = foo.sum();
          console.log("foo.sum=" + z);
 
-         var test = new com.acme.Test("With arg!");
+         var test = new jwave.acme.Test("With arg!");
          console.log(test.made);
          console.log(test.make());
          test.set("Yes! By Setting.");
           console.log(test.made);
+
+          test.setWaveArray()
+          test.decompress();
+
           //var wavi = new com.acme.StaticWave();
           //wavi.decompress();
           //console.log(wavi.waveAsBytes);

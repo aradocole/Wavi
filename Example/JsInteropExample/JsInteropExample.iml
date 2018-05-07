@@ -3,7 +3,7 @@
   <component name="FacetManager">
     <facet type="gwt" name="GWT">
       <configuration>
-        <setting name="compilerParameters" value="-style DETAILED -generateJsInteropExports -logLevel SPAM" />
+        <setting name="compilerParameters" value="-style DETAILED -generateJsInteropExports -logLevel TRACE" />
         <setting name="compilerMaxHeapSize" value="1024" />
         <setting name="gwtScriptOutputStyle" value="DETAILED" />
         <setting name="gwtSdkUrl" value="file://$MODULE_DIR$/../../gwt-2.8.2/gwt-2.8.2" />
