@@ -137,6 +137,70 @@ public class SiteServlet extends HttpServlet{
     public void doPost(HttpServletRequest req, HttpServletResponse rsp) throws ServletException, IOException {
         String response = "nope";
         String path = req.getRequestURI();
+        if (path.equals("/waviauth/")) {
+            String idTokenString = (String) getRequestParams(req).get("idtoken");
+
+            JsonFactory js = JacksonFactory.getDefaultInstance();
+            GoogleIdTokenVerifier verifier = new GoogleIdTokenVerifier.Builder(UrlFetchTransport.getDefaultInstance(), js)
+                    .setAudience(Collections.singletonList("380186301704-gmr2ctka1od78md38cogk48bmtrjlpnp.apps.googleusercontent.com")).build();
+
+            GoogleIdToken idToken = null;
+            try {
+                idToken = verifier.verify(idTokenString);
+            } catch (GeneralSecurityException e) {
+                e.printStackTrace();
+            }
+            if (idToken != null) {
+                GoogleIdToken.Payload payload = idToken.getPayload();
+
+                // Print user identifier
+                String userId = payload.getSubject();
+
+                System.out.println("User ID: " + userId);
+
+                // Get profile information from payload
+                String email = payload.getEmail();
+                boolean emailVerified = Boolean.valueOf(payload.getEmailVerified());
+                String name = (String) payload.get("name");
+                String pictureUrl = (String) payload.get("picture");
+                String locale = "test";//(String) payload.get("locale");
+                String familyName = (String) payload.get("family_name");
+                String givenName = (String) payload.get("given_name");
+
+                Key userKey = datastore.newKeyFactory().setKind("waviuser").newKey(userId);
+
+                Entity user = datastore.get(userKey);
+
+                boolean newUser = false;
+                WaviUser Wuser;
+                if (user == null) {
+                    user = Entity.newBuilder(userKey)
+                            .set("name", name)
+                            .set("family_name", familyName)
+                            .set("given_name", givenName)
+                            .set("picture_URL", pictureUrl)
+                            .set("email", email)
+                            .set("email_verified", true)
+                            .set("locale", locale)
+                            .build();
+                    datastore.put(user);
+                    newUser = true;
+                    Wuser = new WaviUser(userId, name, familyName, givenName, pictureUrl, email, emailVerified, locale);
+                }
+                else {
+                    Wuser = new WaviUser(userId, user.getString("name"), user.getString("family_name"), user.getString("given_name"),
+                            user.getString("picture_URL"), user.getString("email"), user.getBoolean("email_verified"), user.getString("locale"));
+                }
+
+                Gson a = new Gson();
+                response = a.toJson(Wuser);
+                // Use or store profile information
+                // ...
+
+            } else {
+                System.out.println("Invalid ID token.");
+            }
+        }
         //<editor-fold desc="/right/">
         if (path.equals("/right/")) {
             String periodString = (String) getRequestParams(req).get("class_period");

@@ -1,0 +1,20 @@
+<component name="ArtifactManager">
+  <artifact type="exploded-war" build-on-make="true" name="JsInteropExample:war exploded">
+    <output-path />
+    <root id="root">
+      <element id="directory" name="WEB-INF">
+        <element id="directory" name="classes">
+          <element id="module-output" name="JsInteropExample" />
+          <element id="library" level="application" name="R Skeletons" />
+        </element>
+        <element id="directory" name="lib">
+          <element id="library" level="project" name="de.sciss:jwave:1.0.3" />
+        </element>
+      </element>
+      <element id="gwt-compiler-output" facet="JsInteropExample/gwt/GWT" />
+      <element id="javaee-facet-resources" facet="JsInteropTry/web/Web" />
+      <element id="javaee-facet-resources" facet="JsInteropExample/web/Web" />
+      <element id="javaee-facet-resources" facet="JsInteropExample/web/Web" />
+    </root>
+  </artifact>
+</component>
