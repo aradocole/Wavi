@@ -284,16 +284,15 @@
       <updated>1525899407504</updated>
       <workItem from="1525899412678" duration="10007000" />
       <workItem from="1526055565508" duration="2254000" />
-      <workItem from="1526058398592" duration="4904000" />
+      <workItem from="1526058398592" duration="5063000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="17165000" />
+    <option name="totallyTimeSpent" value="17324000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-7" y="-7" width="1842" height="1002" extended-state="6" />
-    <editor active="true" />
     <layout>
       <window_info anchor="right" id="Palette" order="9" />
       <window_info anchor="bottom" id="Event Log" order="8" side_tool="true" />
@@ -313,7 +312,7 @@
       <window_info anchor="right" id="Palette&#9;" order="6" />
       <window_info id="Image Layers" order="4" />
       <window_info anchor="right" id="Capture Analysis" order="2" />
-      <window_info active="true" anchor="bottom" id="Run" order="4" visible="true" weight="0.32912844" />
+      <window_info anchor="bottom" id="Run" order="4" weight="0.32912844" />
       <window_info anchor="bottom" id="Version Control" order="5" show_stripe_button="false" />
       <window_info anchor="bottom" id="Terminal" order="7" />
       <window_info content_ui="combo" id="Project" order="2" visible="true" weight="0.33744395" />
