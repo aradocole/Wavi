@@ -7,49 +7,47 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="15373533-2191-4310-b79e-a2347d64fff8" name="Default" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../Example/JsInteropExample/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../Example/JsInteropExample/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Example/JsInteropExample/JsInteropExample.iml" beforeDir="false" afterPath="$PROJECT_DIR$/../Example/JsInteropExample/JsInteropExample.iml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Example/JsInteropExample/out/artifacts/JsInteropExample_war_exploded/JsInteropExample.html" beforeDir="false" afterPath="$PROJECT_DIR$/../Example/JsInteropExample/out/artifacts/JsInteropExample_war_exploded/JsInteropExample.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Example/JsInteropExample/out/artifacts/JsInteropExample_war_exploded/JsInteropExample/FA5A357D427990F327A6E6E5AC394DFF.cache.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Example/JsInteropExample/out/artifacts/JsInteropExample_war_exploded/JsInteropExample/JsInteropExample.devmode.js" beforeDir="false" afterPath="$PROJECT_DIR$/../Example/JsInteropExample/out/artifacts/JsInteropExample_war_exploded/JsInteropExample/JsInteropExample.devmode.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Example/JsInteropExample/out/artifacts/JsInteropExample_war_exploded/JsInteropExample/F4314AE691AE9B2B7C5BFD1BFD03C750.cache.js" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/../Example/JsInteropExample/out/artifacts/JsInteropExample_war_exploded/JsInteropExample/JsInteropExample.nocache.js" beforeDir="false" afterPath="$PROJECT_DIR$/../Example/JsInteropExample/out/artifacts/JsInteropExample_war_exploded/JsInteropExample/JsInteropExample.nocache.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../Example/JsInteropExample/out/artifacts/JsInteropExample_war_exploded/JsInteropExample/compilation-mappings.txt" beforeDir="false" afterPath="$PROJECT_DIR$/../Example/JsInteropExample/out/artifacts/JsInteropExample_war_exploded/JsInteropExample/compilation-mappings.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Example/JsInteropExample/out/artifacts/JsInteropExample_war_exploded/WEB-INF/classes/com/JsInteropExample.gwt.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Example/JsInteropExample/out/artifacts/JsInteropExample_war_exploded/WEB-INF/classes/com/acme/Bar$MyTestScript.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Example/JsInteropExample/out/artifacts/JsInteropExample_war_exploded/WEB-INF/classes/com/acme/Bar.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Example/JsInteropExample/out/artifacts/JsInteropExample_war_exploded/WEB-INF/classes/com/acme/Foo.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Example/JsInteropExample/out/artifacts/JsInteropExample_war_exploded/WEB-INF/classes/com/acme/Operators.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Example/JsInteropExample/out/artifacts/JsInteropExample_war_exploded/WEB-INF/classes/com/acme/StaticWave.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Example/JsInteropExample/out/artifacts/JsInteropExample_war_exploded/WEB-INF/classes/com/acme/Test.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Example/JsInteropExample/out/production/JsInteropExample/com/JsInteropExample.gwt.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Example/JsInteropExample/out/production/JsInteropExample/com/acme/Bar$MyTestScript.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Example/JsInteropExample/out/production/JsInteropExample/com/acme/Bar.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Example/JsInteropExample/out/production/JsInteropExample/com/acme/Foo.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Example/JsInteropExample/out/production/JsInteropExample/com/acme/Operators.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Example/JsInteropExample/out/production/JsInteropExample/com/acme/StaticWave.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Example/JsInteropExample/out/production/JsInteropExample/com/acme/Test.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Example/JsInteropExample/src/com/JsInteropExample.gwt.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Example/JsInteropExample/src/com/acme/Bar.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Example/JsInteropExample/src/com/acme/Foo.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Example/JsInteropExample/src/com/acme/Operators.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Example/JsInteropExample/src/com/acme/StaticWave.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Example/JsInteropExample/src/com/acme/Test.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Example/JsInteropExample/war/JsInteropExample.html" beforeDir="false" afterPath="$PROJECT_DIR$/../Example/JsInteropExample/war/JsInteropExample.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../JsInteropExample 3/JsInteropExample/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../JsInteropExample 3/JsInteropExample/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../WaviWeb/FA5A357D427990F327A6E6E5AC394DFF.cache.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../WaviWeb/JsInteropExample.nocache.js" beforeDir="false" afterPath="$PROJECT_DIR$/../WaviWeb/JsInteropExample.nocache.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../WaviWeb/compilation-mappings.txt" beforeDir="false" afterPath="$PROJECT_DIR$/../WaviWeb/compilation-mappings.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Example/JsInteropExample/out/artifacts/JsInteropExample_war_exploded/WEB-INF/classes/jwave/acme/Test.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Example/JsInteropExample/out/production/JsInteropExample/jwave/acme/Test.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Example/JsInteropExample/src/jwave/acme/Test.java" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/../WaviWeb/test.html" beforeDir="false" afterPath="$PROJECT_DIR$/../WaviWeb/test.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../WaviWeb/test.js" beforeDir="false" afterPath="$PROJECT_DIR$/../WaviWeb/test.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../WaviWeb/test2.js" beforeDir="false" afterPath="$PROJECT_DIR$/../WaviWeb/test2.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../wavi/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../wavi/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../wavi/out/production/wavi/Demo.class" beforeDir="false" afterPath="$PROJECT_DIR$/../wavi/out/production/wavi/Demo.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../wavi/out/production/wavi/Wave$1.class" beforeDir="false" afterPath="$PROJECT_DIR$/../wavi/out/production/wavi/Wave$1.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../wavi/out/production/wavi/Wave.class" beforeDir="false" afterPath="$PROJECT_DIR$/../wavi/out/production/wavi/Wave.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../wavi/out/production/wavi/com/intellij/uiDesigner/core/LayoutState.class" beforeDir="false" afterPath="$PROJECT_DIR$/../wavi/out/production/wavi/com/intellij/uiDesigner/core/LayoutState.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../wavi/out/production/wavi/files/outputs/No Tears Left To Cry.zip" beforeDir="false" afterPath="$PROJECT_DIR$/../wavi/out/production/wavi/files/outputs/No Tears Left To Cry.zip" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../wavi/out/production/wavi/ByteTest.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../wavi/out/production/wavi/Demo.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../wavi/out/production/wavi/DesktopPlayer/DesktopPlayer.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../wavi/out/production/wavi/DesktopPlayer/Operators.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../wavi/out/production/wavi/DesktopPlayer/PlayerPanel$1.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../wavi/out/production/wavi/DesktopPlayer/PlayerPanel$2.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../wavi/out/production/wavi/DesktopPlayer/PlayerPanel$3$1.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../wavi/out/production/wavi/DesktopPlayer/PlayerPanel$3$2.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../wavi/out/production/wavi/DesktopPlayer/PlayerPanel$3.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../wavi/out/production/wavi/DesktopPlayer/PlayerPanel.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../wavi/out/production/wavi/DesktopPlayer/Wave$1.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../wavi/out/production/wavi/DesktopPlayer/Wave.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../wavi/out/production/wavi/DesktopPlayer/timeSlider.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../wavi/out/production/wavi/Frontend$1.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../wavi/out/production/wavi/Frontend$2$1.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../wavi/out/production/wavi/Frontend$2.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../wavi/out/production/wavi/Frontend$3.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../wavi/out/production/wavi/Frontend.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../wavi/out/production/wavi/Main.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../wavi/out/production/wavi/Operators.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../wavi/out/production/wavi/StaticWave.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../wavi/out/production/wavi/Wave$1.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../wavi/out/production/wavi/Wave.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../wavi/out/production/wavi/WavePlayer.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../wavi/out/production/wavi/files/InvalidParamException.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../wavi/out/production/wavi/files/outputs/pipe.zip" beforeDir="false" afterPath="$PROJECT_DIR$/../wavi/out/production/wavi/files/outputs/pipe.zip" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../wavi/out/production/wavi/player2$1.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../wavi/out/production/wavi/player2.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../wavi/out/production/wavi/test.class" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/../wavi/src/Demo.java" beforeDir="false" afterPath="$PROJECT_DIR$/../wavi/src/Demo.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../wavi/src/Wave.java" beforeDir="false" afterPath="$PROJECT_DIR$/../wavi/src/Wave.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../wavi/src/files/outputs/No Tears Left To Cry.zip" beforeDir="false" afterPath="$PROJECT_DIR$/../wavi/src/files/outputs/No Tears Left To Cry.zip" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
@@ -60,14 +58,23 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="SiteServlet.java" pinned="false" current-in-tab="true">
+      <file leaf-file-name="SiteServlet.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/SiteServlet.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-2132">
+            <state relative-caret-position="17">
               <caret line="350" selection-start-line="350" selection-end-line="350" />
               <folding>
                 <element signature="method#doGet#0;class#SiteServlet#0" />
               </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="WaviUser.java" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/src/WaviUser.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="170">
+              <caret line="10" column="29" lean-forward="true" selection-start-line="10" selection-start-column="29" selection-end-line="10" selection-end-column="29" />
             </state>
           </provider>
         </entry>
@@ -136,9 +143,8 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
-      <pane id="PackagesPane" />
       <pane id="AndroidView" />
-      <pane id="Scope" />
+      <pane id="PackagesPane" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
@@ -161,6 +167,7 @@
           <select />
         </subPane>
       </pane>
+      <pane id="Scope" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -254,18 +261,20 @@
       <workItem from="1524845584178" duration="3870000" />
       <workItem from="1525281365523" duration="2820000" />
       <workItem from="1525722691601" duration="26000" />
+      <workItem from="1526058495110" duration="627000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="6726000" />
+    <option name="totallyTimeSpent" value="7353000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-7" y="-7" width="1842" height="1002" extended-state="6" />
+    <editor active="true" />
     <layout>
       <window_info anchor="right" id="Palette" order="0" />
       <window_info anchor="bottom" id="Event Log" order="0" side_tool="true" />
-      <window_info active="true" anchor="bottom" id="Application Servers" order="0" visible="true" weight="0.32912844" />
+      <window_info anchor="bottom" id="Application Servers" order="0" visible="true" weight="0.32912844" />
       <window_info anchor="right" id="Maven Projects" order="0" />
       <window_info anchor="bottom" id="Database Changes" order="0" show_stripe_button="false" />
       <window_info id="Capture Tool" order="0" />
@@ -284,7 +293,7 @@
       <window_info anchor="bottom" id="Run" order="0" />
       <window_info anchor="bottom" id="Version Control" order="0" />
       <window_info anchor="bottom" id="Terminal" order="0" />
-      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.34136772" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.34529147" />
       <window_info anchor="right" id="R Packages" order="0" />
       <window_info id="Web" order="1" side_tool="true" />
       <window_info anchor="right" id="Google Cloud Storage" order="0" />
@@ -300,6 +309,30 @@
     <option name="myLimit" value="2678400000" />
   </component>
   <component name="editorHistoryManager">
+    <entry file="file://$PROJECT_DIR$/src/SiteServlet.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="5950">
+          <caret line="350" selection-start-line="350" selection-end-line="350" />
+          <folding>
+            <element signature="method#doGet#0;class#SiteServlet#0" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/HarknessClass.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="34">
+          <caret line="4" column="13" selection-start-line="4" selection-start-column="13" selection-end-line="4" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/JWave/Wave.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="8823">
+          <caret line="528" column="8" selection-start-line="528" selection-start-column="8" selection-end-line="528" selection-end-column="8" />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/src/SiteServlet.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="5950">
@@ -364,11 +397,18 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/SiteServlet.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-2132">
+        <state relative-caret-position="17">
           <caret line="350" selection-start-line="350" selection-end-line="350" />
           <folding>
             <element signature="method#doGet#0;class#SiteServlet#0" />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/WaviUser.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="170">
+          <caret line="10" column="29" lean-forward="true" selection-start-line="10" selection-start-column="29" selection-end-line="10" selection-end-column="29" />
         </state>
       </provider>
     </entry>

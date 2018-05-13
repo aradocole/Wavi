@@ -43,11 +43,11 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="PlayerPanel.java" pinned="false" current-in-tab="true">
+      <file leaf-file-name="PlayerPanel.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/DesktopPlayer/PlayerPanel.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="136">
-              <caret line="100" column="49" selection-start-line="100" selection-start-column="49" selection-end-line="100" selection-end-column="49" />
+            <state relative-caret-position="1445">
+              <caret line="100" column="57" selection-start-line="100" selection-start-column="47" selection-end-line="100" selection-end-column="57" />
               <folding>
                 <element signature="e#5367#5368#0" expanded="true" />
                 <element signature="e#5434#5435#0" expanded="true" />
@@ -56,11 +56,11 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="Wave.java" pinned="false" current-in-tab="false">
+      <file leaf-file-name="Wave.java" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/DesktopPlayer/Wave.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="424">
-              <caret line="189" selection-start-line="189" selection-end-line="189" />
+            <state relative-caret-position="17">
+              <caret line="172" column="34" lean-forward="true" selection-start-line="172" selection-start-column="34" selection-end-line="172" selection-end-column="34" />
               <folding>
                 <element signature="docComment;class#Wave#0" />
                 <element signature="e#1510#1541#0" />
@@ -95,26 +95,11 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="StaticWave.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/StaticWave.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="221">
-              <caret line="13" column="29" selection-start-line="13" selection-start-column="18" selection-end-line="13" selection-end-column="29" />
-              <folding>
-                <element signature="imports" expanded="true" />
-                <element signature="method#StaticWave#0;class#StaticWave#0" />
-                <element signature="method#toBytesFromDoubles#0;class#StaticWave#0" />
-                <element signature="method#decompress#0;class#StaticWave#0" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
       <file leaf-file-name="Demo.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/Demo.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="442">
-              <caret line="26" selection-start-line="26" selection-end-line="26" />
+            <state relative-caret-position="238">
+              <caret line="17" column="44" selection-start-line="17" selection-start-column="44" selection-end-line="17" selection-end-column="44" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -125,8 +110,8 @@
       <file leaf-file-name="Wave.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/Wave.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="246">
-              <caret line="762" selection-start-line="762" selection-end-line="762" />
+            <state relative-caret-position="1360">
+              <caret line="223" column="52" selection-start-line="223" selection-start-column="42" selection-end-line="223" selection-end-column="52" />
               <folding>
                 <element signature="n#!!doc;n#waveAsDoubles#0;n#Wave#0" />
                 <element signature="e#1456#1487#0" />
@@ -152,6 +137,7 @@
       <find>toZip</find>
       <find>tobytesfromdoub</find>
       <find>decom</find>
+      <find>doubles</find>
     </findStrings>
   </component>
   <component name="IdeDocumentHistory">
@@ -208,9 +194,9 @@
           <select />
         </subPane>
       </pane>
-      <pane id="AndroidView" />
-      <pane id="Scope" />
       <pane id="PackagesPane" />
+      <pane id="Scope" />
+      <pane id="AndroidView" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -220,7 +206,7 @@
     <property name="ACTIVE_CLOUD_PROJECT_NUMBER" value="380186301704" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/../DesktopBackend" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/../Example/JsInteropExample" />
     <property name="project.structure.last.edited" value="Artifacts" />
     <property name="project.structure.proportion" value="0.0" />
     <property name="project.structure.side.proportion" value="0.4218391" />
@@ -321,14 +307,17 @@
       <workItem from="1525450944531" duration="1950000" />
       <workItem from="1525453043299" duration="14000" />
       <workItem from="1525710835233" duration="4771000" />
+      <workItem from="1525885935503" duration="5480000" />
+      <workItem from="1526055567489" duration="3114000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="13862000" />
+    <option name="totallyTimeSpent" value="22456000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-7" y="-7" width="1842" height="1002" extended-state="6" />
+    <editor active="true" />
     <layout>
       <window_info anchor="right" id="Palette" order="3" />
       <window_info anchor="bottom" id="Event Log" order="7" side_tool="true" weight="0.32946146" />
@@ -344,25 +333,25 @@
       <window_info id="UI Designer" order="2" />
       <window_info anchor="bottom" id="Debug" order="7" weight="0.32912844" />
       <window_info anchor="bottom" id="TODO" order="7" />
-      <window_info anchor="bottom" id="Messages" order="7" />
       <window_info anchor="right" id="Palette&#9;" order="3" />
       <window_info id="Image Layers" order="2" />
       <window_info anchor="right" id="Capture Analysis" order="3" />
-      <window_info anchor="bottom" id="Run" order="7" weight="0.32798165" />
       <window_info anchor="bottom" id="Version Control" order="7" show_stripe_button="false" />
-      <window_info anchor="right" id="Coverage" side_tool="true" weight="0.3295964" />
+      <window_info anchor="bottom" id="Run" order="7" weight="0.32798165" />
       <window_info anchor="bottom" id="Terminal" order="7" />
-      <window_info content_ui="combo" id="Project" order="2" visible="true" weight="0.34080717" />
+      <window_info active="true" content_ui="combo" id="Project" order="2" visible="true" weight="0.34865472" />
       <window_info anchor="right" id="R Packages" order="3" />
       <window_info anchor="right" id="Google Cloud Storage" order="3" weight="0.3295964" />
       <window_info anchor="right" id="Theme Preview" order="3" />
       <window_info id="Favorites" order="2" side_tool="true" />
+      <window_info anchor="bottom" id="Messages" order="7" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
       <window_info anchor="right" id="Commander" order="0" weight="0.4" />
-      <window_info anchor="bottom" id="Message" order="0" />
-      <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
-      <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
       <window_info anchor="bottom" id="Find" order="1" />
+      <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
+      <window_info anchor="bottom" id="Message" order="0" />
+      <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
+      <window_info anchor="right" id="Coverage" order="4" side_tool="true" weight="0.3295964" />
     </layout>
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -406,6 +395,188 @@
     <option name="FILTER_TARGETS" value="false" />
   </component>
   <component name="editorHistoryManager">
+    <entry file="file://$PROJECT_DIR$/src/DesktopPlayer/DesktopPlayer.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="68">
+          <caret line="10" column="13" selection-start-line="10" selection-start-column="13" selection-end-line="10" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/DesktopPlayer/PlayerPanel.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1700">
+          <caret line="100" column="57" lean-forward="true" selection-start-line="100" selection-start-column="47" selection-end-line="100" selection-end-column="57" />
+          <folding>
+            <element signature="e#5367#5368#0" expanded="true" />
+            <element signature="e#5434#5435#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/StaticWave.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="102">
+          <caret line="13" column="29" selection-start-line="13" selection-start-column="18" selection-end-line="13" selection-end-column="29" />
+          <folding>
+            <element signature="imports" expanded="true" />
+            <element signature="method#StaticWave#0;class#StaticWave#0" />
+            <element signature="method#toBytesFromDoubles#0;class#StaticWave#0" />
+            <element signature="method#decompress#0;class#StaticWave#0" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Demo.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="238">
+          <caret line="17" column="44" selection-start-line="17" selection-start-column="44" selection-end-line="17" selection-end-column="44" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Wave.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="3791">
+          <caret line="223" column="52" selection-start-line="223" selection-start-column="42" selection-end-line="223" selection-end-column="52" />
+          <folding>
+            <element signature="n#!!doc;n#waveAsDoubles#0;n#Wave#0" />
+            <element signature="e#1456#1487#0" />
+            <element signature="e#2445#2476#0" />
+            <element signature="docComment;method#Wave#0;class#Wave#0" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/DesktopPlayer/Wave.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="3213">
+          <caret line="189" selection-start-line="189" selection-end-line="189" />
+          <folding>
+            <element signature="docComment;class#Wave#0" />
+            <element signature="e#1510#1541#0" />
+            <element signature="e#2499#2530#0" />
+            <element signature="e#5421#6460#0" />
+            <element signature="e#9978#10330#0" />
+            <element signature="e#9978#10611#0" />
+            <element signature="e#10617#10934#0" />
+            <element signature="e#10940#11437#0" />
+            <element signature="e#11443#12185#0" />
+            <element signature="e#12191#12412#0" />
+            <element signature="e#12418#12705#0" />
+            <element signature="e#12711#13051#0" />
+            <element signature="e#12711#13547#0" />
+            <element signature="e#13553#13930#0" />
+            <element signature="e#13553#14611#0" />
+            <element signature="e#14617#16845#0" />
+            <element signature="e#16851#19001#0" />
+            <element signature="e#19007#19392#0" />
+            <element signature="e#19398#19861#0" />
+            <element signature="e#20853#21353#0" />
+            <element signature="e#20853#22242#0" />
+            <element signature="e#22248#22851#0" />
+            <element signature="e#24088#24588#0" />
+            <element signature="e#24088#25720#0" />
+            <element signature="e#25726#26060#0" />
+            <element signature="e#25726#27002#0" />
+            <element signature="e#27008#28023#0" />
+            <element signature="e#28029#32130#0" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/DesktopPlayer/DesktopPlayer.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="68">
+          <caret line="10" column="13" selection-start-line="10" selection-start-column="13" selection-end-line="10" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/DesktopPlayer/Wave.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="3213">
+          <caret line="189" selection-start-line="189" selection-end-line="189" />
+          <folding>
+            <element signature="docComment;class#Wave#0" />
+            <element signature="e#1510#1541#0" />
+            <element signature="e#2499#2530#0" />
+            <element signature="e#5421#6460#0" />
+            <element signature="e#9978#10330#0" />
+            <element signature="e#9978#10611#0" />
+            <element signature="e#10617#10934#0" />
+            <element signature="e#10940#11437#0" />
+            <element signature="e#11443#12185#0" />
+            <element signature="e#12191#12412#0" />
+            <element signature="e#12418#12705#0" />
+            <element signature="e#12711#13051#0" />
+            <element signature="e#12711#13547#0" />
+            <element signature="e#13553#13930#0" />
+            <element signature="e#13553#14611#0" />
+            <element signature="e#14617#16845#0" />
+            <element signature="e#16851#19001#0" />
+            <element signature="e#19007#19392#0" />
+            <element signature="e#19398#19861#0" />
+            <element signature="e#20853#21353#0" />
+            <element signature="e#20853#22242#0" />
+            <element signature="e#22248#22851#0" />
+            <element signature="e#24088#24588#0" />
+            <element signature="e#24088#25720#0" />
+            <element signature="e#25726#26060#0" />
+            <element signature="e#25726#27002#0" />
+            <element signature="e#27008#28023#0" />
+            <element signature="e#28029#32130#0" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/StaticWave.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="102">
+          <caret line="13" column="29" selection-start-line="13" selection-start-column="18" selection-end-line="13" selection-end-column="29" />
+          <folding>
+            <element signature="imports" expanded="true" />
+            <element signature="method#StaticWave#0;class#StaticWave#0" />
+            <element signature="method#toBytesFromDoubles#0;class#StaticWave#0" />
+            <element signature="method#decompress#0;class#StaticWave#0" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Demo.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="391">
+          <caret line="26" selection-start-line="26" selection-end-line="26" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Wave.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="12954">
+          <caret line="762" selection-start-line="762" selection-end-line="762" />
+          <folding>
+            <element signature="n#!!doc;n#waveAsDoubles#0;n#Wave#0" />
+            <element signature="e#1456#1487#0" />
+            <element signature="e#2445#2476#0" />
+            <element signature="docComment;method#Wave#0;class#Wave#0" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/DesktopPlayer/PlayerPanel.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1700">
+          <caret line="100" column="49" selection-start-line="100" selection-start-column="49" selection-end-line="100" selection-end-column="49" />
+          <folding>
+            <element signature="e#5367#5368#0" expanded="true" />
+            <element signature="e#5434#5435#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/src/DesktopPlayer/DesktopPlayer.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="68">
@@ -646,6 +817,47 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/src/DesktopPlayer/DesktopPlayer.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="68">
+          <caret line="10" column="13" selection-start-line="10" selection-start-column="13" selection-end-line="10" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Wave.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1360">
+          <caret line="223" column="52" selection-start-line="223" selection-start-column="42" selection-end-line="223" selection-end-column="52" />
+          <folding>
+            <element signature="n#!!doc;n#waveAsDoubles#0;n#Wave#0" />
+            <element signature="e#1456#1487#0" />
+            <element signature="e#2445#2476#0" />
+            <element signature="docComment;method#Wave#0;class#Wave#0" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Demo.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="238">
+          <caret line="17" column="44" selection-start-line="17" selection-start-column="44" selection-end-line="17" selection-end-column="44" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/DesktopPlayer/PlayerPanel.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1445">
+          <caret line="100" column="57" selection-start-line="100" selection-start-column="47" selection-end-line="100" selection-end-column="57" />
+          <folding>
+            <element signature="e#5367#5368#0" expanded="true" />
+            <element signature="e#5434#5435#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/src/StaticWave.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="221">
@@ -659,33 +871,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/Wave.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="246">
-          <caret line="762" selection-start-line="762" selection-end-line="762" />
-          <folding>
-            <element signature="n#!!doc;n#waveAsDoubles#0;n#Wave#0" />
-            <element signature="e#1456#1487#0" />
-            <element signature="e#2445#2476#0" />
-            <element signature="docComment;method#Wave#0;class#Wave#0" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/Demo.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="442">
-          <caret line="26" selection-start-line="26" selection-end-line="26" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/DesktopPlayer/Wave.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="424">
-          <caret line="189" selection-start-line="189" selection-end-line="189" />
+        <state relative-caret-position="17">
+          <caret line="172" column="34" lean-forward="true" selection-start-line="172" selection-start-column="34" selection-end-line="172" selection-end-column="34" />
           <folding>
             <element signature="docComment;class#Wave#0" />
             <element signature="e#1510#1541#0" />
@@ -715,24 +904,6 @@
             <element signature="e#25726#27002#0" />
             <element signature="e#27008#28023#0" />
             <element signature="e#28029#32130#0" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/DesktopPlayer/DesktopPlayer.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="68">
-          <caret line="10" column="13" selection-start-line="10" selection-start-column="13" selection-end-line="10" selection-end-column="13" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/DesktopPlayer/PlayerPanel.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="136">
-          <caret line="100" column="49" selection-start-line="100" selection-start-column="49" selection-end-line="100" selection-end-column="49" />
-          <folding>
-            <element signature="e#5367#5368#0" expanded="true" />
-            <element signature="e#5434#5435#0" expanded="true" />
           </folding>
         </state>
       </provider>

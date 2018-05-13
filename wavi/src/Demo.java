@@ -5,7 +5,7 @@ import java.io.IOException;
 
 public class Demo {
     public static void main(String[] args) throws IOException, UnsupportedAudioFileException {
-        String path = "src/files/inputs/pipe.wav";
+        String path = "src/files/inputs/test.wav";
 
         Wave wave = new Wave(path);
 
@@ -13,9 +13,9 @@ public class Demo {
 
         wave.compress(1500);
 
-        wave.toZipFile("src/files/outputs/pipe.zip");
+        wave.toZipFile("src/files/outputs/test.zip");
 
-        path = "src/files/outputs/pipe.zip";
+        path = "src/files/outputs/test.zip";
         Wave song = null;
         try {
             song = new Wave(path);
