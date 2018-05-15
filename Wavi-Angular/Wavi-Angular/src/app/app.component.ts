@@ -1,7 +1,9 @@
-import {Component, OnInit} from '@angular/core';
-import {HttpClient} from "@angular/common/http";
+import {ChangeDetectorRef, Component, OnInit} from '@angular/core';
+import {HttpClient, HttpHeaders} from "@angular/common/http";
 import {WindowRef} from "./WindowRef";
 import {s} from "@angular/core/src/render3";
+import {WaviUser} from "./WaviUser";
+import {AuthResponse} from "./AuthResponse";
 
 @Component({
   selector: 'app-root',
@@ -9,17 +11,31 @@ import {s} from "@angular/core/src/render3";
   styleUrls: ['./app.component.css']
 })
 export class AppComponent implements OnInit{
-  songs: Array<Array<string>> = Array();
   selectedSong: string;
   sampleRates: number;
 
+  googleyolo: any;
+  user: WaviUser;
+  id: string;
 
-  constructor(private http: HttpClient, private winRef: WindowRef) { }
+  songName: string = "";
+  songURL: string = "";
+
+  constructor(private http: HttpClient, private winRef: WindowRef, private cd: ChangeDetectorRef) { }
+
+  sendSong() {
+    console.log(this.songName + this.songURL);
+    const body = ("songName=" + this.songName + "&URL=" + this.songURL + "&id=" + this.user.id);
+
+    this.http.post<AuthResponse>('https://radovandesign.com/songPost/', body, {headers: new HttpHeaders().set('Content-Type', 'application/x-www-form-urlencoded')})
+      .subscribe(data => {
+          this.user = data;
+          this.cd.detectChanges();
+      })
+  }
 
   ngOnInit() {
-    this.songs.push(["Staying Alive", "first20"]);
-    this.songs.push(["Spooopy", "spoopy"]);
-    this.songs.push(["No Tears Left to Cry", "No Tears Left To Cry"]);
+    this.login();
 
       if (!this.winRef.nativeWindow.AudioContext) {
         if (!this.winRef.nativeWindow.webkitAudioContext) {
@@ -51,8 +67,7 @@ export class AppComponent implements OnInit{
 
   playSelected() {
     console.log(this.sampleRates);
-    var nName = this.selectedSong.split(" ").join("%20");
-    var path = "https://storage.googleapis.com/rd-site-resources/wavelets/" + nName +".zip"
+    var path = this.selectedSong;
 
     var arraybuffer;
 
@@ -95,6 +110,8 @@ export class AppComponent implements OnInit{
     }, function(error) {
       // onerror callback
     });
+
+
   }
 
   playDoubles(d, r) {
@@ -129,6 +146,110 @@ export class AppComponent implements OnInit{
     source.start(0);
     console.log("Playing!");
   }
+
+  useGoogleIdTokenForAuth(id_token: string) {
+    console.log(id_token);
+    const body = ("id_token=" + id_token);
+    this.http.post<AuthResponse>('https://radovandesign.com/waviauth/', body, {headers: new HttpHeaders().set('Content-Type', 'application/x-www-form-urlencoded')})
+      .subscribe(data => {
+        this.user = data;
+        this.cd.detectChanges();
+        console.log(this.user.id);
+        console.log(this.user);
+      })
+  }
+
+  login() {
+    this.winRef.nativeWindow.onGoogleYoloLoad = (googleyolo) => {
+      this.googleyolo = googleyolo;
+      const retrievePromise = googleyolo.retrieve({
+        supportedAuthMethods: [
+          "https://accounts.google.com"
+        ],
+        supportedIdTokenProviders: [
+          {
+            uri: "https://accounts.google.com",
+            clientId: "380186301704-gmr2ctka1od78md38cogk48bmtrjlpnp.apps.googleusercontent.com"
+          }
+        ]
+      });
+
+      const hintPromise = googleyolo.hint({
+        supportedAuthMethods: [
+          "https://accounts.google.com"
+        ],
+        supportedIdTokenProviders: [
+          {
+            uri: "https://accounts.google.com",
+            clientId: "380186301704-gmr2ctka1od78md38cogk48bmtrjlpnp.apps.googleusercontent.com"
+          }
+        ]
+      });
+
+      function cancel() {
+        googleyolo.cancelLastOperation().then(() => {
+          // Credential selector closed.
+        });
+      }
+
+      retrievePromise.then((credential) => {
+        this.useGoogleIdTokenForAuth(credential.idToken);
+      }, (error) => {
+        // Credentials could not be retrieved. In general, if the user does not
+        // need to be signed in to use the page, you can just fail silently; or,
+        // you can also examine the error object to handle specific error cases.
+
+        // If retrieval failed because there were no credentials available, and
+        // signing in might be useful or is required to proceed from this page,
+        // you can call `hint()` to prompt the user to select an account to sign
+        // in or sign up with.
+        if (error.type === 'noCredentialsAvailable') {
+          hintPromise.then((credential) => {
+            if (credential.idToken) {
+              // Send the token to your auth backend.
+              this.useGoogleIdTokenForAuth(credential.idToken);
+            }
+          }, (error) => {
+            switch (error.type) {
+              case "userCanceled":
+                // The user closed the hint selector. Depending on the desired UX,
+                // request manual sign up or do nothing.
+                break;
+              case "noCredentialsAvailable":
+                // No hint available for the session. Depending on the desired UX,
+                // request manual sign up or do nothing.
+                break;
+              case "requestFailed":
+                // The request failed, most likely because of a timeout.
+                // You can retry another time if necessary.
+                break;
+              case "operationCanceled":
+                // The operation was programmatically canceled, do nothing.
+                break;
+              case "illegalConcurrentRequest":
+                // Another operation is pending, this one was aborted.
+                break;
+              case "initializationError":
+                // Failed to initialize. Refer to error.message for debugging.
+                break;
+              case "configurationError":
+                // Configuration error. Refer to error.message for debugging.
+                break;
+              default:
+              // Unknown error, do nothing.
+            }
+          });
+        }
+      });
+
+      function signOut() {
+        googleyolo.disableAutoSignIn().then(() => {
+          // Auto sign-in disabled.
+        });
+      }
+    };
+  }
+
 }
 
 var context;    // Audio context

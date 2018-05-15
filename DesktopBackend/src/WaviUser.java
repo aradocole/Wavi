@@ -1,3 +1,6 @@
+import java.util.ArrayList;
+import java.util.List;
+
 public class WaviUser {
     protected String id;
     protected String name;
@@ -8,9 +11,11 @@ public class WaviUser {
     protected boolean email_verified;
     protected String locale;
 
-    protected String[] songs;
+    protected List<String> songNames;
+    protected List<String> songURLS;
 
-    public WaviUser(String ID, String NAME, String FAMILY_NAME, String GIVEN_NAME, String PICTURE_URL, String EMAIL, boolean EMAIL_VERIFIED, String LOCALE) {
+    public WaviUser(String ID, String NAME, String FAMILY_NAME, String GIVEN_NAME, String PICTURE_URL, String EMAIL, boolean EMAIL_VERIFIED, String LOCALE, List SONGS,
+                    List URLS) {
         id = ID;
         name = NAME;
         family_name = FAMILY_NAME;
@@ -19,6 +24,9 @@ public class WaviUser {
         email = EMAIL;
         email_verified = EMAIL_VERIFIED;
         locale = LOCALE;
+
+        songNames = new ArrayList<String>(SONGS);
+        songURLS = new ArrayList<String>(URLS);
     }
 
     public String getString() {

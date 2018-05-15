@@ -137,8 +137,51 @@ public class SiteServlet extends HttpServlet{
     public void doPost(HttpServletRequest req, HttpServletResponse rsp) throws ServletException, IOException {
         String response = "nope";
         String path = req.getRequestURI();
+        if (path.equals("/songPost/")) {
+            String name = (String) getRequestParams(req).get("songName");
+            String url = (String) getRequestParams(req).get("URL");
+            String id = (String) getRequestParams(req).get("id");
+
+            Key userKey = datastore.newKeyFactory().setKind("waviuser").newKey(id);
+
+            Entity user = datastore.get(userKey);
+
+            WaviUser Wuser;
+            List<StringValue> s = new ArrayList<StringValue>(user.getList("songNames"));
+            List<StringValue> u = new ArrayList<StringValue>(user.getList("songURLS"));
+
+            s.add(StringValue.of(name));
+            u.add(StringValue.of(url));
+
+            List<String> S = new ArrayList<String>();
+            List<String> U = new ArrayList<String>();
+            for (int i = 0; i < s.size(); i++) {
+                S.add(s.get(i).get());
+                U.add(u.get(i).get());
+            }
+
+            Entity nuser = Entity.newBuilder(userKey)
+                    .set("name", user.getString("name"))
+                    .set("family_name", user.getString("family_name"))
+                    .set("given_name", user.getString("given_name"))
+                    .set("picture_URL", user.getString("picture_URL"))
+                    .set("email", user.getString("email"))
+                    .set("email_verified", user.getBoolean("email_verified"))
+                    .set("locale", user.getString("locale"))
+                    .set("songNames", s)
+                    .set("songURLS", u)
+                    .build();
+            datastore.put(nuser);
+
+            Wuser = new WaviUser(id, user.getString("name"), user.getString("family_name"), user.getString("given_name"),
+                    user.getString("picture_URL"), user.getString("email"), user.getBoolean("email_verified"), user.getString("locale"),
+                    S, U);
+
+            Gson a = new Gson();
+            response = a.toJson(Wuser);
+        }
         if (path.equals("/waviauth/")) {
-            String idTokenString = (String) getRequestParams(req).get("idtoken");
+            String idTokenString = (String) getRequestParams(req).get("id_token");
 
             JsonFactory js = JacksonFactory.getDefaultInstance();
             GoogleIdTokenVerifier verifier = new GoogleIdTokenVerifier.Builder(UrlFetchTransport.getDefaultInstance(), js)
@@ -173,6 +216,15 @@ public class SiteServlet extends HttpServlet{
 
                 boolean newUser = false;
                 WaviUser Wuser;
+
+                String[] songs = {"Stayin' Alive"};
+                String[] URLS = {"https://storage.googleapis.com/rd-site-resources/wavelets/first20.zip"};
+                List<StringValue> dSongs = new ArrayList<StringValue>();
+                List<StringValue> dURLS = new ArrayList<StringValue>();
+                for (int i = 0; i < songs.length; i++) {
+                    dSongs.add(StringValue.of(songs[i]));
+                    dURLS.add(StringValue.of(URLS[i]));
+                }
                 if (user == null) {
                     user = Entity.newBuilder(userKey)
                             .set("name", name)
@@ -182,14 +234,26 @@ public class SiteServlet extends HttpServlet{
                             .set("email", email)
                             .set("email_verified", true)
                             .set("locale", locale)
+                            .set("songNames", dSongs)
+                            .set("songURLS", dURLS)
                             .build();
                     datastore.put(user);
                     newUser = true;
-                    Wuser = new WaviUser(userId, name, familyName, givenName, pictureUrl, email, emailVerified, locale);
+                    Wuser = new WaviUser(userId, name, familyName, givenName, pictureUrl, email, emailVerified, locale, Arrays.asList(songs), Arrays.asList(URLS));
                 }
                 else {
+                    List<StringValue> s = user.getList("songNames");
+                    List<StringValue> u = user.getList("songURLS");
+                    List<String> S = new ArrayList<String>();
+                    List<String> U = new ArrayList<String>();
+                    for (int i = 0; i < s.size(); i++) {
+                        S.add(s.get(i).get());
+                        U.add(u.get(i).get());
+                    }
+
                     Wuser = new WaviUser(userId, user.getString("name"), user.getString("family_name"), user.getString("given_name"),
-                            user.getString("picture_URL"), user.getString("email"), user.getBoolean("email_verified"), user.getString("locale"));
+                            user.getString("picture_URL"), user.getString("email"), user.getBoolean("email_verified"), user.getString("locale"),
+                            S, U);
                 }
 
                 Gson a = new Gson();

@@ -4,8 +4,8 @@
   <br>
   <select [(ngModel)]="selectedSong">
     <!--<option *ngFor="let song of songs" [value]="song" [selected]="selectedSong==song ? true : null">-->
-    <option *ngFor="let song of songs" [value]="song[1]">
-      {{song[0]}}
+    <option *ngFor="let song of user.songNames" [value]="user.songURLS[user.songNames.indexOf(song)]">
+      {{song}}
     </option>
   </select>
   <select [(ngModel)]="sampleRates">
@@ -17,6 +17,9 @@
       88200 Hz
     </option>
   </select>
+  <input #textbox type="text" [(ngModel)]="songName" required>
+  <input #textbox type="text" [(ngModel)]="songURL" required>
+  <button (click)="sendSong()">Post</button>
 
 </div>
 
