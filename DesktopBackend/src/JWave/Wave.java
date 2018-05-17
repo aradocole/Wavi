@@ -1,5 +1,6 @@
 package JWave;
 
+import jdk.internal.util.xml.impl.Input;
 import jwave.Transform;
 import jwave.transforms.FastWaveletTransform;
 
@@ -265,6 +266,37 @@ public class Wave {
         fileType = r.fileType;
         fileAudioFormat = r.fileAudioFormat;
     }
+
+    public Wave(byte[] b) throws IOException, UnsupportedAudioFileException {
+        InputStream in = new ByteArrayInputStream(b);
+        fileFormat = AudioSystem.getAudioFileFormat(in);
+        fileType = fileFormat.getType();
+        fileAudioFormat = fileFormat.getFormat();
+        waveAsDoubles = bytesToDoubles(b);
+    }
+
+    public double[] bytesToDoubles(byte[] bytes) {
+        //waveAsBytes = bytes;
+
+        short[] shorts = new short[bytes.length/2];
+
+        for (int i = 0; i < shorts.length; i++) {
+            byte byteA = bytes[((i+1)*2)-2];
+            byte byteB = bytes[((i+1)*2)-1];
+            int intA = byteA & 0xff;
+            int intB = (byteB << 8);
+            shorts[i] = (short) (intA | intB);
+        }
+
+        //waveAsShorts = shorts;
+
+        double[] result = new double[shorts.length];
+        for (int i = 0; i < result.length; i++) {
+            result[i] = shorts[i];
+        }
+      return result;
+    }
+
 
     public double[] readWaveAsDoubles(URL u) throws IOException, UnsupportedAudioFileException {
         short[] shorts = readWaveAsShorts(u);

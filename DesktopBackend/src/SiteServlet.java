@@ -24,6 +24,7 @@ import javax.servlet.ServletException;
 import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
+import javax.sound.sampled.AudioSystem;
 import javax.sound.sampled.UnsupportedAudioFileException;
 import java.io.*;
 import java.net.HttpURLConnection;
@@ -137,48 +138,54 @@ public class SiteServlet extends HttpServlet{
     public void doPost(HttpServletRequest req, HttpServletResponse rsp) throws ServletException, IOException {
         String response = "nope";
         String path = req.getRequestURI();
+        if (path.equals("/songUpload/")) {
+            String name = req.getQueryString().split("=")[1].split("&")[0];
+            String id = req.getQueryString().split("=")[2];
+            //String name = (String) getRequestParams(req).get("songName");
+
+            ByteArrayOutputStream out = new ByteArrayOutputStream();
+            InputStream in = req.getInputStream();
+
+            int read;
+            byte[] buff = new byte[1024];
+            while ((read = in.read(buff)) > 0)
+            {
+                out.write(buff, 0, read);
+            }
+            out.flush();
+
+            byte[] result = out.toByteArray();
+
+            Wave w = null;
+            try {
+                w = new Wave(result);
+            } catch (IOException e) {
+                e.printStackTrace();
+            } catch (UnsupportedAudioFileException e) {
+                e.printStackTrace();
+            }
+            w.setWavelet(39);
+            w.compress(1500);
+
+            BUCKET_NAME = "rd-site-resources/wavelets";
+            GcsFileOptions instance = GcsFileOptions.getDefaultInstance();
+            String n = name +".zip";
+            GcsFilename fileName = new GcsFilename(BUCKET_NAME, n);
+            GcsOutputChannel outputChannel = gcsService.createOrReplace(fileName, instance);
+            w.toZipStream(Channels.newOutputStream(outputChannel));
+
+            String name2 = name.replaceAll(" ", "%20");
+            String url = "https://storage.googleapis.com/rd-site-resources/wavelets/" + name2 +".zip";
+            response = addSong(name, url, id);
+        }
+        //<editor-fold desc="songPost">
         if (path.equals("/songPost/")) {
             String name = (String) getRequestParams(req).get("songName");
             String url = (String) getRequestParams(req).get("URL");
             String id = (String) getRequestParams(req).get("id");
 
-            Key userKey = datastore.newKeyFactory().setKind("waviuser").newKey(id);
 
-            Entity user = datastore.get(userKey);
-
-            WaviUser Wuser;
-            List<StringValue> s = new ArrayList<StringValue>(user.getList("songNames"));
-            List<StringValue> u = new ArrayList<StringValue>(user.getList("songURLS"));
-
-            s.add(StringValue.of(name));
-            u.add(StringValue.of(url));
-
-            List<String> S = new ArrayList<String>();
-            List<String> U = new ArrayList<String>();
-            for (int i = 0; i < s.size(); i++) {
-                S.add(s.get(i).get());
-                U.add(u.get(i).get());
-            }
-
-            Entity nuser = Entity.newBuilder(userKey)
-                    .set("name", user.getString("name"))
-                    .set("family_name", user.getString("family_name"))
-                    .set("given_name", user.getString("given_name"))
-                    .set("picture_URL", user.getString("picture_URL"))
-                    .set("email", user.getString("email"))
-                    .set("email_verified", user.getBoolean("email_verified"))
-                    .set("locale", user.getString("locale"))
-                    .set("songNames", s)
-                    .set("songURLS", u)
-                    .build();
-            datastore.put(nuser);
-
-            Wuser = new WaviUser(id, user.getString("name"), user.getString("family_name"), user.getString("given_name"),
-                    user.getString("picture_URL"), user.getString("email"), user.getBoolean("email_verified"), user.getString("locale"),
-                    S, U);
-
-            Gson a = new Gson();
-            response = a.toJson(Wuser);
+            response = addSong(name, url, id);
         }
         if (path.equals("/waviauth/")) {
             String idTokenString = (String) getRequestParams(req).get("id_token");
@@ -265,6 +272,7 @@ public class SiteServlet extends HttpServlet{
                 System.out.println("Invalid ID token.");
             }
         }
+        //</editor-fold>
         //<editor-fold desc="/right/">
         if (path.equals("/right/")) {
             String periodString = (String) getRequestParams(req).get("class_period");
@@ -532,6 +540,7 @@ public class SiteServlet extends HttpServlet{
             }
         }
         //</editor-fold>
+        //<editor-fold desc="chunk">
         if (path.equals("/chunk/")) {
             String song = (String) getRequestParams(req).get("song");
 
@@ -584,6 +593,8 @@ public class SiteServlet extends HttpServlet{
 
 
         }
+        //</editor-fold>
+        //<editor-fold desc="seg">
         if (path.equals("/seg/")) {
             String id = (String) getRequestParams(req).get("id");
             String seg = (String) getRequestParams(req).get("seg");
@@ -595,6 +606,8 @@ public class SiteServlet extends HttpServlet{
             GcsInputChannel readChannel = gcsService.openPrefetchingReadChannel(file, 0, BUFFER_SIZE);
             copy(Channels.newInputStream(readChannel), rsp.getOutputStream());
         }
+        //</editor-fold>
+        //<editor-fold desc="upload">
         if (path.equals("/upload/")) {
             String name = (String) getRequestParams(req).get("name");
 
@@ -604,6 +617,7 @@ public class SiteServlet extends HttpServlet{
             GcsOutputChannel outputChannel = gcsService.createOrReplace(fileName, instance);
             copy(req.getInputStream(), Channels.newOutputStream(outputChannel));
         }
+        //</editor-fold>
         if (path.equals("/compress/")) {
             String name = (String) getRequestParams(req).get("name");
 
@@ -675,5 +689,45 @@ public class SiteServlet extends HttpServlet{
         }
 
         return(params);
+    }
+
+    public String addSong(String name, String url, String id) {
+        Key userKey = datastore.newKeyFactory().setKind("waviuser").newKey(id);
+
+        Entity user = datastore.get(userKey);
+
+        WaviUser Wuser;
+        List<StringValue> s = new ArrayList<StringValue>(user.getList("songNames"));
+        List<StringValue> u = new ArrayList<StringValue>(user.getList("songURLS"));
+
+        s.add(StringValue.of(name));
+        u.add(StringValue.of(url));
+
+        List<String> S = new ArrayList<String>();
+        List<String> U = new ArrayList<String>();
+        for (int i = 0; i < s.size(); i++) {
+            S.add(s.get(i).get());
+            U.add(u.get(i).get());
+        }
+
+        Entity nuser = Entity.newBuilder(userKey)
+                .set("name", user.getString("name"))
+                .set("family_name", user.getString("family_name"))
+                .set("given_name", user.getString("given_name"))
+                .set("picture_URL", user.getString("picture_URL"))
+                .set("email", user.getString("email"))
+                .set("email_verified", user.getBoolean("email_verified"))
+                .set("locale", user.getString("locale"))
+                .set("songNames", s)
+                .set("songURLS", u)
+                .build();
+        datastore.put(nuser);
+
+        Wuser = new WaviUser(id, user.getString("name"), user.getString("family_name"), user.getString("given_name"),
+                user.getString("picture_URL"), user.getString("email"), user.getBoolean("email_verified"), user.getString("locale"),
+                S, U);
+
+        Gson a = new Gson();
+        return a.toJson(Wuser);
     }
 }

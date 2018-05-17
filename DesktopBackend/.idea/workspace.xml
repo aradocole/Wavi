@@ -7,19 +7,26 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="15373533-2191-4310-b79e-a2347d64fff8" name="Default" comment="">
-      <change afterPath="$PROJECT_DIR$/../Wavi-Angular/Wavi-Angular/src/app/AuthResponse.ts" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/DesktopBackend_war_exploded/WEB-INF/appengine-web.xml" beforeDir="false" afterPath="$PROJECT_DIR$/out/artifacts/DesktopBackend_war_exploded/WEB-INF/appengine-web.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/DesktopBackend_war_exploded/WEB-INF/classes/JWave/Wave$1.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/artifacts/DesktopBackend_war_exploded/WEB-INF/classes/JWave/Wave$1.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/DesktopBackend_war_exploded/WEB-INF/classes/JWave/Wave$2.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/artifacts/DesktopBackend_war_exploded/WEB-INF/classes/JWave/Wave$2.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/DesktopBackend_war_exploded/WEB-INF/classes/JWave/Wave.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/artifacts/DesktopBackend_war_exploded/WEB-INF/classes/JWave/Wave.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/out/artifacts/DesktopBackend_war_exploded/WEB-INF/classes/SiteServlet.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/artifacts/DesktopBackend_war_exploded/WEB-INF/classes/SiteServlet.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/artifacts/DesktopBackend_war_exploded/WEB-INF/classes/WaviUser.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/artifacts/DesktopBackend_war_exploded/WEB-INF/classes/WaviUser.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/DesktopBackend/JWave/Wave$1.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/DesktopBackend/JWave/Wave$1.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/DesktopBackend/JWave/Wave$2.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/DesktopBackend/JWave/Wave$2.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/DesktopBackend/JWave/Wave.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/DesktopBackend/JWave/Wave.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/DesktopBackend/SiteServlet.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/DesktopBackend/SiteServlet.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/JWave/Wave.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/JWave/Wave.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/SiteServlet.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/SiteServlet.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/WaviUser.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/WaviUser.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/web/WEB-INF/appengine-web.xml" beforeDir="false" afterPath="$PROJECT_DIR$/web/WEB-INF/appengine-web.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Example/JsInteropExample/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../Example/JsInteropExample/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../Wavi-Angular/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../Wavi-Angular/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Wavi-Angular/Wavi-Angular/src/app/app.component.css" beforeDir="false" afterPath="$PROJECT_DIR$/../Wavi-Angular/Wavi-Angular/src/app/app.component.css" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../Wavi-Angular/Wavi-Angular/src/app/app.component.html" beforeDir="false" afterPath="$PROJECT_DIR$/../Wavi-Angular/Wavi-Angular/src/app/app.component.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../Wavi-Angular/Wavi-Angular/src/app/app.component.ts" beforeDir="false" afterPath="$PROJECT_DIR$/../Wavi-Angular/Wavi-Angular/src/app/app.component.ts" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../Wavi-Angular/Wavi-Angular/src/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/../Wavi-Angular/Wavi-Angular/src/index.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../wavi/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../wavi/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../wavi/out/production/wavi/files/inputs/test.wav" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../wavi/src/Demo.java" beforeDir="false" afterPath="$PROJECT_DIR$/../wavi/src/Demo.java" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
@@ -30,30 +37,25 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="SiteServlet.java" pinned="false" current-in-tab="true">
+      <file leaf-file-name="SiteServlet.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/SiteServlet.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="355">
-              <caret line="167" column="54" selection-start-line="167" selection-start-column="54" selection-end-line="167" selection-end-column="54" />
+            <state relative-caret-position="196">
+              <caret line="178" column="46" selection-start-line="178" selection-start-column="46" selection-end-line="178" selection-end-column="46" />
               <folding>
                 <element signature="method#doGet#0;class#SiteServlet#0" />
-                <element signature="e#6050#6063#0" expanded="true" />
-                <element signature="e#6139#6152#0" expanded="true" />
-                <element signature="e#6285#6293#0" expanded="true" />
-                <element signature="e#6339#6347#0" expanded="true" />
-                <element signature="e#7506#7519#0" expanded="true" />
-                <element signature="e#7579#7592#0" expanded="true" />
-                <element signature="e#8876#8884#0" expanded="true" />
-                <element signature="e#8938#8946#0" expanded="true" />
-                <marker date="1526342628463" expanded="true" signature="7557:11668" ph="..." />
+                <element signature="e#11677#11707#0" />
+                <element signature="e#13428#13457#0" />
+                <element signature="e#16879#16908#0" />
+                <element signature="e#17662#17690#0" />
+                <element signature="e#18961#18991#0" />
+                <element signature="e#21461#21494#0" />
+                <element signature="e#25100#25128#0" />
+                <element signature="e#27459#27485#0" />
+                <element signature="e#28191#28220#0" />
               </folding>
             </state>
           </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="HarknessUser.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/HarknessUser.java">
-          <provider selected="true" editor-type-id="text-editor" />
         </entry>
       </file>
       <file leaf-file-name="HarknessClass.java" pinned="false" current-in-tab="false">
@@ -65,19 +67,55 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="Wave.java" pinned="false" current-in-tab="false">
+      <file leaf-file-name="Wave.java" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/JWave/Wave.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="17">
-              <caret line="528" column="8" selection-start-line="528" selection-start-column="8" selection-end-line="528" selection-end-column="8" />
+            <state relative-caret-position="281">
+              <caret line="290" column="10" selection-start-line="290" selection-start-column="10" selection-end-line="290" selection-end-column="10" />
+              <folding>
+                <element signature="e#1413#1444#0" />
+                <element signature="e#2402#2433#0" />
+                <element signature="e#5324#6363#0" />
+                <element signature="e#5324#9875#0" />
+                <element signature="e#6607#6660#0" />
+                <element signature="e#9881#10233#0" />
+                <element signature="e#9881#10514#0" />
+                <element signature="e#10520#10837#0" />
+                <element signature="e#10843#11340#0" />
+                <element signature="e#11346#12088#0" />
+                <element signature="e#12094#12315#0" />
+                <element signature="e#12321#12608#0" />
+                <element signature="e#12614#12954#0" />
+                <element signature="e#12614#13450#0" />
+                <element signature="e#13456#13833#0" />
+                <element signature="e#13456#14514#0" />
+                <element signature="e#14520#16748#0" />
+                <element signature="e#16754#18904#0" />
+                <element signature="e#18910#19295#0" />
+                <element signature="e#19301#19764#0" />
+              </folding>
             </state>
           </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="appengine-web.xml" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/web/WEB-INF/appengine-web.xml">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="102">
+              <caret line="6" lean-forward="true" selection-start-line="6" selection-end-line="6" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="web.xml" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/web/WEB-INF/web.xml">
+          <provider selected="true" editor-type-id="text-editor" />
         </entry>
       </file>
       <file leaf-file-name="WaviUser.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/WaviUser.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="186">
+            <state relative-caret-position="306">
               <caret line="19" column="20" selection-start-line="19" selection-start-column="20" selection-end-line="19" selection-end-column="20" />
               <folding>
                 <element signature="imports" expanded="true" />
@@ -89,7 +127,7 @@
       <file leaf-file-name="HarknessMap.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/HarknessMap.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="330">
+            <state relative-caret-position="646">
               <caret line="39" column="22" selection-start-line="39" selection-start-column="22" selection-end-line="39" selection-end-column="22" />
               <folding>
                 <element signature="imports" expanded="true" />
@@ -113,6 +151,8 @@
       <find>auth</find>
       <find>map</find>
       <find>waviuser</find>
+      <find>readWave</find>
+      <find>compress</find>
     </findStrings>
   </component>
   <component name="Git.Settings">
@@ -122,6 +162,8 @@
     <option name="CHANGED_PATHS">
       <list>
         <option value="$PROJECT_DIR$/src/WaviUser.java" />
+        <option value="$PROJECT_DIR$/src/JWave/Wave.java" />
+        <option value="$PROJECT_DIR$/web/WEB-INF/appengine-web.xml" />
         <option value="$PROJECT_DIR$/src/SiteServlet.java" />
       </list>
     </option>
@@ -147,8 +189,8 @@
     </navigator>
     <panes>
       <pane id="Scope" />
-      <pane id="PackagesPane" />
       <pane id="AndroidView" />
+      <pane id="PackagesPane" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
@@ -167,6 +209,17 @@
               <item name="src" type="462c0819:PsiDirectoryNode" />
               <item name="JWave" type="462c0819:PsiDirectoryNode" />
             </path>
+            <path>
+              <item name="DesktopBackend" type="b2602c69:ProjectViewProjectNode" />
+              <item name="DesktopBackend" type="462c0819:PsiDirectoryNode" />
+              <item name="web" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="DesktopBackend" type="b2602c69:ProjectViewProjectNode" />
+              <item name="DesktopBackend" type="462c0819:PsiDirectoryNode" />
+              <item name="web" type="462c0819:PsiDirectoryNode" />
+              <item name="WEB-INF" type="462c0819:PsiDirectoryNode" />
+            </path>
           </expand>
           <select />
         </subPane>
@@ -184,7 +237,8 @@
     <property name="project.structure.last.edited" value="Modules" />
     <property name="project.structure.proportion" value="0.0" />
     <property name="project.structure.side.proportion" value="0.2" />
-    <property name="settings.editor.selected.configurable" value="reference.idesettings.quicklists" />
+    <property name="run.code.analysis.last.selected.profile" value="pProject Default" />
+    <property name="settings.editor.selected.configurable" value="editor.preferences.folding" />
   </component>
   <component name="RunDashboard">
     <option name="ruleStates">
@@ -198,10 +252,11 @@
       </list>
     </option>
   </component>
-  <component name="RunManager">
+  <component name="RunManager" selected="Google App Engine Deployment.Servlet">
     <configuration default="true" type="Application" factoryName="Application">
       <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
     </configuration>
+    <configuration name="Debug" type="GCPDebug" factoryName="Google Stackdriver Debug" CloudProjectName="advcompsci-178415" />
     <configuration default="true" type="JUnit" factoryName="JUnit">
       <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
       <option name="ALTERNATIVE_JRE_PATH" />
@@ -250,6 +305,10 @@
         </option>
       </method>
     </configuration>
+    <list>
+      <item itemvalue="Google App Engine Deployment.Servlet" />
+      <item itemvalue="Google Stackdriver Debug.Debug" />
+    </list>
   </component>
   <component name="SvnConfiguration">
     <configuration />
@@ -267,11 +326,12 @@
       <workItem from="1525722691601" duration="26000" />
       <workItem from="1526058495110" duration="627000" />
       <workItem from="1526263603707" duration="11330000" />
+      <workItem from="1526407889151" duration="12023000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="18683000" />
+    <option name="totallyTimeSpent" value="30706000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-7" y="-7" width="1842" height="1002" extended-state="6" />
@@ -289,19 +349,20 @@
       <window_info id="Structure" order="0" side_tool="true" />
       <window_info anchor="right" id="Ant Build" order="0" />
       <window_info id="UI Designer" order="0" />
-      <window_info anchor="bottom" id="Debug" order="0" />
+      <window_info anchor="bottom" id="Debug" order="0" weight="0.32912844" />
       <window_info anchor="bottom" id="TODO" order="0" />
       <window_info anchor="bottom" id="Messages" order="1" weight="0.32912844" />
       <window_info anchor="right" id="Palette&#9;" order="0" />
       <window_info id="Image Layers" order="0" />
       <window_info anchor="bottom" id="Java Enterprise" order="1" />
       <window_info anchor="right" id="Capture Analysis" order="0" />
-      <window_info anchor="bottom" id="Version Control" order="0" />
       <window_info anchor="bottom" id="Run" order="0" />
+      <window_info anchor="bottom" id="Version Control" order="0" />
       <window_info anchor="bottom" id="Terminal" order="0" />
-      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.34921524" />
+      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.353139" />
       <window_info anchor="right" id="R Packages" order="0" />
       <window_info id="Web" order="1" side_tool="true" />
+      <window_info anchor="bottom" id="Find" />
       <window_info anchor="right" id="Google Cloud Storage" order="0" />
       <window_info anchor="right" id="Theme Preview" order="0" />
       <window_info id="Favorites" order="0" side_tool="true" />
@@ -313,22 +374,115 @@
   <component name="VcsContentAnnotationSettings">
     <option name="myLimit" value="2678400000" />
   </component>
+  <component name="XDebuggerManager">
+    <breakpoint-manager>
+      <breakpoints>
+        <line-breakpoint enabled="true" type="cloud-snapshotlocation">
+          <url>file://$PROJECT_DIR$/src/SiteServlet.java</url>
+          <line>143</line>
+          <properties>
+            <option name="addedOnServer" value="true" />
+          </properties>
+          <option name="timeStamp" value="1" />
+        </line-breakpoint>
+      </breakpoints>
+      <breakpoints-dialog>
+        <breakpoints-dialog />
+      </breakpoints-dialog>
+      <option name="time" value="2" />
+    </breakpoint-manager>
+  </component>
   <component name="editorHistoryManager">
+    <entry file="file://$PROJECT_DIR$/src/SiteServlet.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1445">
+          <caret line="167" column="54" selection-start-line="167" selection-start-column="54" selection-end-line="167" selection-end-column="54" />
+          <folding>
+            <element signature="method#doGet#0;class#SiteServlet#0" />
+            <element signature="e#11677#11707#0" />
+            <element signature="e#13428#13457#0" />
+            <element signature="e#16879#16908#0" />
+            <element signature="e#17662#17690#0" />
+            <element signature="e#18961#18991#0" />
+            <element signature="e#21461#21494#0" />
+            <element signature="e#25100#25128#0" />
+            <element signature="e#27459#27485#0" />
+            <element signature="e#28191#28220#0" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/HarknessClass.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="34">
+          <caret line="4" column="13" selection-start-line="4" selection-start-column="13" selection-end-line="4" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/JWave/Wave.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="8823">
+          <caret line="528" column="8" selection-start-line="528" selection-start-column="8" selection-end-line="528" selection-end-column="8" />
+          <folding>
+            <element signature="e#1413#1444#0" />
+            <element signature="e#2402#2433#0" />
+            <element signature="e#5324#6363#0" />
+            <element signature="e#5324#9875#0" />
+            <element signature="e#6607#6660#0" />
+            <element signature="e#9881#10233#0" />
+            <element signature="e#9881#10514#0" />
+            <element signature="e#10520#10837#0" />
+            <element signature="e#10843#11340#0" />
+            <element signature="e#11346#12088#0" />
+            <element signature="e#12094#12315#0" />
+            <element signature="e#12321#12608#0" />
+            <element signature="e#12614#12954#0" />
+            <element signature="e#12614#13450#0" />
+            <element signature="e#13456#13833#0" />
+            <element signature="e#13456#14514#0" />
+            <element signature="e#14520#16748#0" />
+            <element signature="e#16754#18904#0" />
+            <element signature="e#18910#19295#0" />
+            <element signature="e#19301#19764#0" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/WaviUser.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="306">
+          <caret line="19" column="20" selection-start-line="19" selection-start-column="20" selection-end-line="19" selection-end-column="20" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/HarknessMap.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="646">
+          <caret line="39" column="22" selection-start-line="39" selection-start-column="22" selection-end-line="39" selection-end-column="22" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/src/SiteServlet.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="4556">
           <caret line="350" selection-start-line="350" selection-end-line="350" />
           <folding>
             <element signature="method#doGet#0;class#SiteServlet#0" />
-            <element signature="e#6050#6063#0" expanded="true" />
-            <element signature="e#6139#6152#0" expanded="true" />
-            <element signature="e#6285#6293#0" expanded="true" />
-            <element signature="e#6339#6347#0" expanded="true" />
-            <element signature="e#7506#7519#0" expanded="true" />
-            <element signature="e#7579#7592#0" expanded="true" />
-            <element signature="e#8876#8884#0" expanded="true" />
-            <element signature="e#8938#8946#0" expanded="true" />
-            <marker date="1526342628463" expanded="true" signature="7557:11668" ph="..." />
+            <element signature="e#11677#11707#0" />
+            <element signature="e#13428#13457#0" />
+            <element signature="e#16879#16908#0" />
+            <element signature="e#17662#17690#0" />
+            <element signature="e#18961#18991#0" />
+            <element signature="e#21461#21494#0" />
+            <element signature="e#25100#25128#0" />
+            <element signature="e#27459#27485#0" />
+            <element signature="e#28191#28220#0" />
           </folding>
         </state>
       </provider>
@@ -363,15 +517,15 @@
           <caret line="350" selection-start-line="350" selection-end-line="350" />
           <folding>
             <element signature="method#doGet#0;class#SiteServlet#0" />
-            <element signature="e#6050#6063#0" expanded="true" />
-            <element signature="e#6139#6152#0" expanded="true" />
-            <element signature="e#6285#6293#0" expanded="true" />
-            <element signature="e#6339#6347#0" expanded="true" />
-            <element signature="e#7506#7519#0" expanded="true" />
-            <element signature="e#7579#7592#0" expanded="true" />
-            <element signature="e#8876#8884#0" expanded="true" />
-            <element signature="e#8938#8946#0" expanded="true" />
-            <marker date="1526342628463" expanded="true" signature="7557:11668" ph="..." />
+            <element signature="e#11677#11707#0" />
+            <element signature="e#13428#13457#0" />
+            <element signature="e#16879#16908#0" />
+            <element signature="e#17662#17690#0" />
+            <element signature="e#18961#18991#0" />
+            <element signature="e#21461#21494#0" />
+            <element signature="e#25100#25128#0" />
+            <element signature="e#27459#27485#0" />
+            <element signature="e#28191#28220#0" />
           </folding>
         </state>
       </provider>
@@ -396,15 +550,15 @@
           <caret line="350" selection-start-line="350" selection-end-line="350" />
           <folding>
             <element signature="method#doGet#0;class#SiteServlet#0" />
-            <element signature="e#6050#6063#0" expanded="true" />
-            <element signature="e#6139#6152#0" expanded="true" />
-            <element signature="e#6285#6293#0" expanded="true" />
-            <element signature="e#6339#6347#0" expanded="true" />
-            <element signature="e#7506#7519#0" expanded="true" />
-            <element signature="e#7579#7592#0" expanded="true" />
-            <element signature="e#8876#8884#0" expanded="true" />
-            <element signature="e#8938#8946#0" expanded="true" />
-            <marker date="1526342628463" expanded="true" signature="7557:11668" ph="..." />
+            <element signature="e#11677#11707#0" />
+            <element signature="e#13428#13457#0" />
+            <element signature="e#16879#16908#0" />
+            <element signature="e#17662#17690#0" />
+            <element signature="e#18961#18991#0" />
+            <element signature="e#21461#21494#0" />
+            <element signature="e#25100#25128#0" />
+            <element signature="e#27459#27485#0" />
+            <element signature="e#28191#28220#0" />
           </folding>
         </state>
       </provider>
@@ -429,15 +583,15 @@
           <caret line="495" column="25" selection-start-line="495" selection-start-column="25" selection-end-line="495" selection-end-column="25" />
           <folding>
             <element signature="method#doGet#0;class#SiteServlet#0" />
-            <element signature="e#6050#6063#0" expanded="true" />
-            <element signature="e#6139#6152#0" expanded="true" />
-            <element signature="e#6285#6293#0" expanded="true" />
-            <element signature="e#6339#6347#0" expanded="true" />
-            <element signature="e#7506#7519#0" expanded="true" />
-            <element signature="e#7579#7592#0" expanded="true" />
-            <element signature="e#8876#8884#0" expanded="true" />
-            <element signature="e#8938#8946#0" expanded="true" />
-            <marker date="1526342628463" expanded="true" signature="7557:11668" ph="..." />
+            <element signature="e#11677#11707#0" />
+            <element signature="e#13428#13457#0" />
+            <element signature="e#16879#16908#0" />
+            <element signature="e#17662#17690#0" />
+            <element signature="e#18961#18991#0" />
+            <element signature="e#21461#21494#0" />
+            <element signature="e#25100#25128#0" />
+            <element signature="e#27459#27485#0" />
+            <element signature="e#28191#28220#0" />
           </folding>
         </state>
       </provider>
@@ -449,23 +603,9 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/HarknessClass.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="34">
-          <caret line="4" column="13" selection-start-line="4" selection-start-column="13" selection-end-line="4" selection-end-column="13" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/JWave/Wave.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="17">
-          <caret line="528" column="8" selection-start-line="528" selection-start-column="8" selection-end-line="528" selection-end-column="8" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/HarknessMap.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="330">
+        <state relative-caret-position="646">
           <caret line="39" column="22" selection-start-line="39" selection-start-column="22" selection-end-line="39" selection-end-column="22" />
           <folding>
             <element signature="imports" expanded="true" />
@@ -473,12 +613,9 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/HarknessUser.java">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/WaviUser.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="186">
+        <state relative-caret-position="306">
           <caret line="19" column="20" selection-start-line="19" selection-start-column="20" selection-end-line="19" selection-end-column="20" />
           <folding>
             <element signature="imports" expanded="true" />
@@ -486,21 +623,67 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/web/WEB-INF/web.xml">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/web/WEB-INF/appengine-web.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="102">
+          <caret line="6" lean-forward="true" selection-start-line="6" selection-end-line="6" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/HarknessClass.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="34">
+          <caret line="4" column="13" selection-start-line="4" selection-start-column="13" selection-end-line="4" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/src/SiteServlet.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="355">
-          <caret line="167" column="54" selection-start-line="167" selection-start-column="54" selection-end-line="167" selection-end-column="54" />
+        <state relative-caret-position="196">
+          <caret line="178" column="46" selection-start-line="178" selection-start-column="46" selection-end-line="178" selection-end-column="46" />
           <folding>
             <element signature="method#doGet#0;class#SiteServlet#0" />
-            <element signature="e#6050#6063#0" expanded="true" />
-            <element signature="e#6139#6152#0" expanded="true" />
-            <element signature="e#6285#6293#0" expanded="true" />
-            <element signature="e#6339#6347#0" expanded="true" />
-            <element signature="e#7506#7519#0" expanded="true" />
-            <element signature="e#7579#7592#0" expanded="true" />
-            <element signature="e#8876#8884#0" expanded="true" />
-            <element signature="e#8938#8946#0" expanded="true" />
-            <marker date="1526342628463" expanded="true" signature="7557:11668" ph="..." />
+            <element signature="e#11677#11707#0" />
+            <element signature="e#13428#13457#0" />
+            <element signature="e#16879#16908#0" />
+            <element signature="e#17662#17690#0" />
+            <element signature="e#18961#18991#0" />
+            <element signature="e#21461#21494#0" />
+            <element signature="e#25100#25128#0" />
+            <element signature="e#27459#27485#0" />
+            <element signature="e#28191#28220#0" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/JWave/Wave.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="281">
+          <caret line="290" column="10" selection-start-line="290" selection-start-column="10" selection-end-line="290" selection-end-column="10" />
+          <folding>
+            <element signature="e#1413#1444#0" />
+            <element signature="e#2402#2433#0" />
+            <element signature="e#5324#6363#0" />
+            <element signature="e#5324#9875#0" />
+            <element signature="e#6607#6660#0" />
+            <element signature="e#9881#10233#0" />
+            <element signature="e#9881#10514#0" />
+            <element signature="e#10520#10837#0" />
+            <element signature="e#10843#11340#0" />
+            <element signature="e#11346#12088#0" />
+            <element signature="e#12094#12315#0" />
+            <element signature="e#12321#12608#0" />
+            <element signature="e#12614#12954#0" />
+            <element signature="e#12614#13450#0" />
+            <element signature="e#13456#13833#0" />
+            <element signature="e#13456#14514#0" />
+            <element signature="e#14520#16748#0" />
+            <element signature="e#16754#18904#0" />
+            <element signature="e#18910#19295#0" />
+            <element signature="e#19301#19764#0" />
           </folding>
         </state>
       </provider>

@@ -1,25 +1,39 @@
 <div id="top_div">
-  <button (click)="playSelected()" id="playb">Play</button>
-  <label>Song:</label>
-  <br>
-  <select [(ngModel)]="selectedSong">
-    <!--<option *ngFor="let song of songs" [value]="song" [selected]="selectedSong==song ? true : null">-->
-    <option *ngFor="let song of user.songNames" [value]="user.songURLS[user.songNames.indexOf(song)]">
-      {{song}}
-    </option>
-  </select>
-  <select [(ngModel)]="sampleRates">
-    <!--<option *ngFor="let song of songs" [value]="song" [selected]="selectedSong==song ? true : null">-->
-    <option [value]="44100">
-      44100 Hz
-    </option>
-    <option [value]="88200">
-      88200 Hz
-    </option>
-  </select>
-  <input #textbox type="text" [(ngModel)]="songName" required>
-  <input #textbox type="text" [(ngModel)]="songURL" required>
-  <button (click)="sendSong()">Post</button>
+  <div id="upload_div">
+    <div>
+      Name:
+      <input #textbox type="text" [(ngModel)]="songName" required>
+    </div>
+    <hr>
+    <div>
+      <input type="file" id="song" (change)="onFileChange($event)" #fileInput>
+    </div>
+    <hr>
+    <div>
+      <button (click)="onSubmit()">Submit</button>
+    </div>
+  </div>
+  <hr>
+  <div id="playback_div">
+    <div>
+      <label>Song:</label>
+      <select [(ngModel)]="selectedSong">
+        <!--<option *ngFor="let song of songs" [value]="song" [selected]="selectedSong==song ? true : null">-->
+        <option *ngFor="let song of user.songNames" [value]="user.songURLS[user.songNames.indexOf(song)]">
+          {{song}}
+        </option>
+      </select>
+    </div>
+    <div>
+      <button (click)="playSelected()" id="playb">Play</button>
+    </div>
+  </div>
+  <hr>
+  <div id="login_div">
+    <div class="g-signin2" data-onsuccess='console.log("thing")' data-theme="dark"></div>
+    <button id="g_b">Google Sign In</button>
 
+    <button (click)="signOut()">Sign Out</button>
+  </div>
 </div>
 

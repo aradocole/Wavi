@@ -1,9 +1,10 @@
 import {ChangeDetectorRef, Component, OnInit} from '@angular/core';
-import {HttpClient, HttpHeaders} from "@angular/common/http";
+import {HttpClient, HttpHeaders, HttpParams} from "@angular/common/http";
 import {WindowRef} from "./WindowRef";
 import {s} from "@angular/core/src/render3";
 import {WaviUser} from "./WaviUser";
 import {AuthResponse} from "./AuthResponse";
+import {callNgModuleLifecycle} from "@angular/core/src/view/ng_module";
 
 @Component({
   selector: 'app-root',
@@ -21,7 +22,63 @@ export class AppComponent implements OnInit{
   songName: string = "";
   songURL: string = "";
 
+  payload: FormData;
+  a: ArrayBuffer;
+
+  sbutton: boolean;
+
   constructor(private http: HttpClient, private winRef: WindowRef, private cd: ChangeDetectorRef) { }
+
+  onFileChange(event) {
+    if(event.target.files.length > 0) {
+      let file = event.target.files[0];
+      console.log(file);
+      this.payload = this.createPayload(file);
+    }
+  }
+
+  createPayload(file): any {
+    let input = new FormData();
+    input.append("songName", this.songName);
+    let f = new FileReader();
+    f.onload = e => {
+      this.a = f.result;
+      console.log(this.a);
+      input.append("data", f.result);
+      return input;
+    }
+    f.readAsArrayBuffer(file);
+  }
+
+  onSignIn() {
+    //var id_token = googleUser.getAuthResponse().id_token;
+    //console.log(id_token);
+    console.log("hit");
+    //this.useGoogleIdTokenForAuth(id_token);
+  }
+
+  onSubmit() {
+    //console.log(this.payload.get("data"));
+    const body = new Int8Array(this.a);
+    let body2 = new URLSearchParams();
+    console.log(body);
+    /*this.http.post<AuthResponse>('https://radovandesign.com/songUpload/?songName=' + this.songName, body, {headers: new HttpHeaders().set('Content-Type', 'application/x-www-form-urlencoded')})
+      .subscribe(data => {
+        this.user = data;
+        this.cd.detectChanges();
+      })*/
+    var xhr = new XMLHttpRequest();
+    xhr.open("POST", 'https://radovandesign.com/songUpload/?songName=' + this.songName +"&id=" + this.user.id);
+
+    xhr.setRequestHeader("Content-type", "application/x-www-form-urlencoded");
+
+    xhr.onload = () => {
+      this.user = JSON.parse(xhr.response);
+      this.cd.detectChanges();
+    }
+
+    xhr.send(body);
+  }
 
   sendSong() {
     console.log(this.songName + this.songURL);
@@ -65,6 +122,7 @@ export class AppComponent implements OnInit{
     };
   }
 
+
   playSelected() {
     console.log(this.sampleRates);
     var path = this.selectedSong;
@@ -95,7 +153,12 @@ export class AppComponent implements OnInit{
               test.decompress();
               //console.log(test.waveAsBytes);
               //console.log(test.waveAsDoubles);
-              that.playDoubles(test.waveAsDoubles, test.sampleRate);
+              if (test.channels == 2) {
+                that.playDoubles(test.waveAsDoubles, test.sampleRate*2);
+              }
+              else {
+                that.playDoubles(test.waveAsDoubles, test.sampleRate);
+              }
             };
             fileReader.readAsArrayBuffer(blob);
             // close the zip reader
@@ -218,6 +281,7 @@ export class AppComponent implements OnInit{
               case "noCredentialsAvailable":
                 // No hint available for the session. Depending on the desired UX,
                 // request manual sign up or do nothing.
+                this.sbutton = true;
                 break;
               case "requestFailed":
                 // The request failed, most likely because of a timeout.
@@ -248,6 +312,13 @@ export class AppComponent implements OnInit{
         });
       }
     };
+  }
+
+  signOut() {
+    this.googleyolo.disableAutoSignIn().then(() => {
+      // Auto sign-in disabled.
+      location.reload(true);
+    });
   }
 
 }

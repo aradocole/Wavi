@@ -1,5 +1,30 @@
 #top_div {
   display: flex;
+  flex-direction: column;
   align-items: center;
   justify-content: center;
 }
+
+#upload_div {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+#playback_div {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+#login_div {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+
+
