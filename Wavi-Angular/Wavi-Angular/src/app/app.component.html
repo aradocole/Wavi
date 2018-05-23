@@ -1,19 +1,24 @@
 <div id="top_div">
   <div id="upload_div">
     <div>
-      Name:
+      Song Name:
       <input #textbox type="text" [(ngModel)]="songName" required>
     </div>
-    <hr>
+    <br>
     <div>
       <input type="file" id="song" (change)="onFileChange($event)" #fileInput>
+      <button (click)="clearFile()">Clear File</button>
     </div>
-    <hr>
+    <br>
     <div>
-      <button (click)="onSubmit()">Submit</button>
+      <button (click)="onSubmit()">Upload and Convert</button>
+    </div>
+    <br>
+    <div>
+      <progress [value]="progress" max="100"></progress>
     </div>
   </div>
-  <hr>
+  <br>
   <div id="playback_div">
     <div>
       <label>Song:</label>
@@ -28,10 +33,11 @@
       <button (click)="playSelected()" id="playb">Play</button>
     </div>
   </div>
-  <hr>
+  <br>
   <div id="login_div">
-    <div class="g-signin2" data-onsuccess='console.log("thing")' data-theme="dark"></div>
-    <button id="g_b">Google Sign In</button>
+    <div>
+      <button id="g_b" (click)="manualLogin()">Sign In</button>
+    </div>
 
     <button (click)="signOut()">Sign Out</button>
   </div>

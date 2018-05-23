@@ -167,16 +167,20 @@ public class SiteServlet extends HttpServlet{
             w.setWavelet(39);
             w.compress(1500);
 
+            String nameO = name.replaceAll("%20", " ");
+            String s = nameO;
+
             BUCKET_NAME = "rd-site-resources/wavelets";
             GcsFileOptions instance = GcsFileOptions.getDefaultInstance();
-            String n = name +".zip";
+            String n = s +".zip";
             GcsFilename fileName = new GcsFilename(BUCKET_NAME, n);
             GcsOutputChannel outputChannel = gcsService.createOrReplace(fileName, instance);
             w.toZipStream(Channels.newOutputStream(outputChannel));
 
-            String name2 = name.replaceAll(" ", "%20");
+
+            String name2 = nameO.replaceAll(" ", "%20");
             String url = "https://storage.googleapis.com/rd-site-resources/wavelets/" + name2 +".zip";
-            response = addSong(name, url, id);
+            response = addSong(s, url, id);
         }
         //<editor-fold desc="songPost">
         if (path.equals("/songPost/")) {

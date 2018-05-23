@@ -1,5 +1,5 @@
 import {ChangeDetectorRef, Component, OnInit} from '@angular/core';
-import {HttpClient, HttpHeaders, HttpParams} from "@angular/common/http";
+import {HttpClient, HttpEvent, HttpEventType, HttpHeaders, HttpParams, HttpRequest} from "@angular/common/http";
 import {WindowRef} from "./WindowRef";
 import {s} from "@angular/core/src/render3";
 import {WaviUser} from "./WaviUser";
@@ -25,30 +25,39 @@ export class AppComponent implements OnInit{
   payload: FormData;
   a: ArrayBuffer;
 
-  sbutton: boolean;
+  fu: File;
+
+  progress: number = 0;
 
   constructor(private http: HttpClient, private winRef: WindowRef, private cd: ChangeDetectorRef) { }
 
+  manualLogin() {
+    this.winRef.nativeWindow.gapi.load('auth2',() => {
+      var auth2 = this.winRef.nativeWindow.gapi.auth2.init();
+
+      // Sign the user in, and then retrieve their ID.
+     // if (auth2.isSignedIn.get()){
+        auth2.signIn().then(() => {
+          var id_token = auth2.currentUser.get().getAuthResponse().id_token;
+          this.useGoogleIdTokenForAuth(id_token);
+        });
+      //}
+    });
+  }
+
   onFileChange(event) {
     if(event.target.files.length > 0) {
-      let file = event.target.files[0];
-      console.log(file);
-      this.payload = this.createPayload(file);
+      this.fu = event.target.files[0];
+      console.log(this.fu);
+      let f = new FileReader();
+      f.onload = e => {
+        this.a = f.result;
+        console.log(this.a);
+      }
+      f.readAsArrayBuffer(this.fu);
     }
   }
 
-  createPayload(file): any {
-    let input = new FormData();
-    input.append("songName", this.songName);
-    let f = new FileReader();
-    f.onload = e => {
-      this.a = f.result;
-      console.log(this.a);
-      input.append("data", f.result);
-      return input;
-    }
-    f.readAsArrayBuffer(file);
-  }
 
   onSignIn() {
     //var id_token = googleUser.getAuthResponse().id_token;
@@ -57,27 +66,54 @@ export class AppComponent implements OnInit{
     //this.useGoogleIdTokenForAuth(id_token);
   }
 
+  clearFile() {
+    (<HTMLInputElement>document.getElementById('song')).value = null;
+    this.fu = null;
+    this.cd.detectChanges();
+  }
+
   onSubmit() {
-    //console.log(this.payload.get("data"));
-    const body = new Int8Array(this.a);
-    let body2 = new URLSearchParams();
-    console.log(body);
-    /*this.http.post<AuthResponse>('https://radovandesign.com/songUpload/?songName=' + this.songName, body, {headers: new HttpHeaders().set('Content-Type', 'application/x-www-form-urlencoded')})
-      .subscribe(data => {
-        this.user = data;
-        this.cd.detectChanges();
-      })*/
-    var xhr = new XMLHttpRequest();
-    xhr.open("POST", 'https://radovandesign.com/songUpload/?songName=' + this.songName +"&id=" + this.user.id);
-
-    xhr.setRequestHeader("Content-type", "application/x-www-form-urlencoded");
-
-    xhr.onload = () => {
-      this.user = JSON.parse(xhr.response);
-      this.cd.detectChanges();
+    var b = true;
+    if (this.songName == "") {
+      this.winRef.nativeWindow.alert("You Must Enter a Name for Your Song!");
+      b = false;
     }
+    if (this.fu == null) {
+      this.winRef.nativeWindow.alert("You Must Choose a File to Upload!");
+      b = false;
+    }
+    if (this.fu.type != "audio/wav") {
+      this.winRef.nativeWindow.alert("File Must be a .wav Audio File!");
+      b = false;
+    }
+    if (b) {
+      const body = new Int8Array(this.a);
 
-    xhr.send(body);
+      console.log(body);
+
+      var xhr = new XMLHttpRequest();
+      xhr.open("POST", 'https://radovandesign.com/songUpload/?songName=' + this.songName + "&id=" + this.user.id);
+
+      xhr.setRequestHeader("Content-type", "application/x-www-form-urlencoded");
+
+      xhr.onload = () => {
+        this.user = JSON.parse(xhr.response);
+        this.progress = 100;
+        this.fu = null;
+        this.a = null;
+        this.cd.detectChanges();
+      }
+
+      xhr.upload.onprogress = (e) => {
+        if (e.lengthComputable) {
+         var per = e.loaded / e.total * 90;
+         this.progress = per;
+         this.cd.detectChanges();
+        }
+      }
+
+      xhr.send(body);
+    }
   }
 
   sendSong() {
@@ -124,9 +160,40 @@ export class AppComponent implements OnInit{
 
 
   playSelected() {
+    this.progress = 0;
+
     console.log(this.sampleRates);
     var path = this.selectedSong;
 
+    const req = new HttpRequest('GET', path, {
+      reportProgress: true,
+      responseType: 'blob'
+    });
+
+    this.http.request(req).subscribe((event: HttpEvent<any>) => {
+      switch (event.type) {
+        case HttpEventType.Sent:
+          console.log('Request sent!');
+          break;
+        case HttpEventType.ResponseHeader:
+          console.log('Response header received!');
+          break;
+        case HttpEventType.DownloadProgress:
+          this.progress = event.loaded / event.total * 90;
+          this.cd.detectChanges();
+          break;
+        case HttpEventType.Response:
+          this.unzip(event.body);
+      }
+    });
+
+    /*this.http.get(path, {responseType: 'blob'})
+      .subscribe(data => {
+
+      });*/
+  }
+
+  unzip(bleb) {
     var arraybuffer;
 
     var test = new this.winRef.nativeWindow.jwave.acme.Wavi();
@@ -134,7 +201,8 @@ export class AppComponent implements OnInit{
 
     zip.workerScriptsPath = "assets/zip.js-master/zip.js-master/WebContent/";
 
-    zip.createReader(new zip.HttpReader(path), reader => {
+    //zip.createReader(new zip.HttpReader(path), reader => {
+    zip.createReader(new zip.BlobReader(bleb), reader => {
       // get all entries from the zip
       reader.getEntries(entries => {
         if (entries.length) {
@@ -173,9 +241,8 @@ export class AppComponent implements OnInit{
     }, function(error) {
       // onerror callback
     });
-
-
   }
+
 
   playDoubles(d, r) {
     var floats = new Float32Array(d);
@@ -206,6 +273,7 @@ export class AppComponent implements OnInit{
     buf.getChannelData(0).set(floats);
     source.buffer = buf;
     source.connect( context.destination );
+    this.progress = 100;
     source.start(0);
     console.log("Playing!");
   }
@@ -277,11 +345,12 @@ export class AppComponent implements OnInit{
               case "userCanceled":
                 // The user closed the hint selector. Depending on the desired UX,
                 // request manual sign up or do nothing.
+                this.manualLogin();
                 break;
               case "noCredentialsAvailable":
                 // No hint available for the session. Depending on the desired UX,
                 // request manual sign up or do nothing.
-                this.sbutton = true;
+                this.manualLogin();
                 break;
               case "requestFailed":
                 // The request failed, most likely because of a timeout.
