@@ -5,10 +5,12 @@ import { AppComponent } from './app.component';
 import {FormsModule} from "@angular/forms";
 import {HttpClientModule} from "@angular/common/http";
 import {WindowRef} from "./WindowRef";
+import {AppStreaming} from "./app.streaming";
 
 @NgModule({
   declarations: [
-    AppComponent
+    AppComponent,
+    AppStreaming
   ],
   imports: [
     BrowserModule,
@@ -17,5 +19,6 @@ import {WindowRef} from "./WindowRef";
   ],
   providers: [WindowRef],
   bootstrap: [AppComponent]
+  //bootstrap: [AppStreaming]
 })
 export class AppModule { }

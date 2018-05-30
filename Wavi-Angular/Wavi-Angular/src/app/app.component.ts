@@ -5,6 +5,8 @@ import {s} from "@angular/core/src/render3";
 import {WaviUser} from "./WaviUser";
 import {AuthResponse} from "./AuthResponse";
 import {callNgModuleLifecycle} from "@angular/core/src/view/ng_module";
+import {KeyboardType} from "tns-core-modules/ui/enums";
+import number = KeyboardType.number;
 
 @Component({
   selector: 'app-root',
@@ -29,7 +31,9 @@ export class AppComponent implements OnInit{
 
   progress: number = 0;
 
-  constructor(private http: HttpClient, private winRef: WindowRef, private cd: ChangeDetectorRef) { }
+  msgs: string[] = [];
+
+  constructor(private http: HttpClient, public winRef: WindowRef, public cd: ChangeDetectorRef) { }
 
   manualLogin() {
     this.winRef.nativeWindow.gapi.load('auth2',() => {
@@ -128,7 +132,6 @@ export class AppComponent implements OnInit{
   }
 
   ngOnInit() {
-    this.login();
 
       if (!this.winRef.nativeWindow.AudioContext) {
         if (!this.winRef.nativeWindow.webkitAudioContext) {
@@ -156,14 +159,16 @@ export class AppComponent implements OnInit{
         console.log(test.made);
         this.wave = test;*/
     };
+    this.login();
   }
 
 
-  playSelected() {
+  playSelected(p) {
     this.progress = 0;
+    this.msgs.length = 0;
 
     console.log(this.sampleRates);
-    var path = this.selectedSong;
+    var path = p;
 
     const req = new HttpRequest('GET', path, {
       reportProgress: true,
@@ -174,9 +179,11 @@ export class AppComponent implements OnInit{
       switch (event.type) {
         case HttpEventType.Sent:
           console.log('Request sent!');
+          this.msgs.push('Request sent!');
           break;
         case HttpEventType.ResponseHeader:
           console.log('Response header received!');
+          this.msgs.push('Response header received!');
           break;
         case HttpEventType.DownloadProgress:
           this.progress = event.loaded / event.total * 90;
@@ -196,7 +203,9 @@ export class AppComponent implements OnInit{
   unzip(bleb) {
     var arraybuffer;
 
-    var test = new this.winRef.nativeWindow.jwave.acme.Wavi();
+    let a: any = this.winRef.nativeWindow.jwave;
+
+    var test = new a.acme.Wavi();
     var zip = this.winRef.nativeWindow.zip;
 
     zip.workerScriptsPath = "assets/zip.js-master/zip.js-master/WebContent/";
@@ -211,14 +220,20 @@ export class AppComponent implements OnInit{
             // text contains the entry data as a String
             var fileReader = new FileReader();
             var that = this;
-            fileReader.onload  = function () {
-              arraybuffer = this.result;
+            fileReader.onload  = (ev: any) => {
+              arraybuffer = ev.target.result;
+              this.msgs.push('Payload loaded!');
+              this.cd.detectChanges();
               console.log(arraybuffer);
               test.setWaveArray(new Int8Array(arraybuffer));
+              this.msgs.push('Decompressor created!');
+              this.cd.detectChanges();
               arraybuffer = null;
               //console.log(test.waveAsBytes);
               //console.log(test.waveAsDoubles);
               test.decompress();
+              this.msgs.push('Decompressed!');
+              this.cd.detectChanges();
               //console.log(test.waveAsBytes);
               //console.log(test.waveAsDoubles);
               if (test.channels == 2) {
@@ -227,6 +242,8 @@ export class AppComponent implements OnInit{
               else {
                 that.playDoubles(test.waveAsDoubles, test.sampleRate);
               }
+              this.msgs.push('Song playing!');
+              this.cd.detectChanges();
             };
             fileReader.readAsArrayBuffer(blob);
             // close the zip reader
@@ -345,6 +362,7 @@ export class AppComponent implements OnInit{
               case "userCanceled":
                 // The user closed the hint selector. Depending on the desired UX,
                 // request manual sign up or do nothing.
+                console.log("Cancelled!");
                 this.manualLogin();
                 break;
               case "noCredentialsAvailable":
@@ -355,6 +373,7 @@ export class AppComponent implements OnInit{
               case "requestFailed":
                 // The request failed, most likely because of a timeout.
                 // You can retry another time if necessary.
+                console.log("Failed!");
                 break;
               case "operationCanceled":
                 // The operation was programmatically canceled, do nothing.

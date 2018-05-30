@@ -1,5 +1,7 @@
-<div id="top_div">
-  <div id="upload_div">
+<app-streaming [user]="user" [messages]="msgs" [prog]="progress" [cd]="cd" [winRef]="winRef"
+               (played)="playSelected($event)" (signedIn)="manualLogin()" (signedOut)="signOut()"></app-streaming>
+<!--<div id="top_div">
+  <!--<div id="upload_div">
     <div>
       Song Name:
       <input #textbox type="text" [(ngModel)]="songName" required>
@@ -18,19 +20,19 @@
       <progress [value]="progress" max="100"></progress>
     </div>
   </div>
-  <br>
-  <div id="playback_div">
+  <br>-->
+  <!--<div id="playback_div">
     <div>
       <label>Song:</label>
       <select [(ngModel)]="selectedSong">
-        <!--<option *ngFor="let song of songs" [value]="song" [selected]="selectedSong==song ? true : null">-->
+        <!--<option *ngFor="let song of songs" [value]="song" [selected]="selectedSong==song ? true : null">
         <option *ngFor="let song of user.songNames" [value]="user.songURLS[user.songNames.indexOf(song)]">
           {{song}}
         </option>
       </select>
     </div>
     <div>
-      <button (click)="playSelected()" id="playb">Play</button>
+      <button (click)="playSelected(selectedSong)" id="playb">Play</button>
     </div>
   </div>
   <br>
@@ -41,5 +43,5 @@
 
     <button (click)="signOut()">Sign Out</button>
   </div>
-</div>
+</div>-->
 

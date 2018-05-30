@@ -88,51 +88,49 @@ public class SiteServlet extends HttpServlet{
 
     public void doGet(HttpServletRequest req, HttpServletResponse rsp) throws ServletException, IOException {
         String path = req.getPathInfo();
-        if (req.getServerName().split("\\.")[0].equals("wavelets")) {
-            BUCKET_NAME = "rd-site-resources/wavelets";
-        }
-        else if (req.getServerName().split("\\.")[0].equals("wavi")) {
-            BUCKET_NAME = "rd-site-resources/wavelets";
-        }
-        else if (req.getServerName().split("\\.")[0].equals("harkness")) {
-            BUCKET_NAME = "rd-site-resources/harkness";
-        }
-        else if (req.getServerName().split("\\.")[0].equals("interradio")) {
-            BUCKET_NAME = "rd-site-resources/interradio";
-        }
-        else if (req.getServerName().split("\\.")[0].equals("right")) {
-            BUCKET_NAME = "rd-site-resources/right";
-        }
-        else if (path.contains("/images/")) {
-            BUCKET_NAME = "rd-site-resources/images";
-            path = path.replace("/images/", "");
-        }
-        else if (path.contains("/songs/")) {
-            BUCKET_NAME = "rd-site-resources/songs/";
-            path = path.replace("/mops/songs/", "");
-        }
-        else if (path.contains("/assets")) {
-            BUCKET_NAME = "rd-site-resources/harkness/assets";
-            path = path.replace("/assets/", "");
+        if (path.equals("/fetch/")) {
+            String response = "This is a test!";
+            doResponse(req, rsp, response);
         }
         else {
-            BUCKET_NAME = "rd-site-resources";
-        }
+            if (req.getServerName().split("\\.")[0].equals("wavelets")) {
+                BUCKET_NAME = "rd-site-resources/wavelets";
+            } else if (req.getServerName().split("\\.")[0].equals("wavi")) {
+                BUCKET_NAME = "rd-site-resources/wavelets";
+            } else if (req.getServerName().split("\\.")[0].equals("harkness")) {
+                BUCKET_NAME = "rd-site-resources/harkness";
+            } else if (req.getServerName().split("\\.")[0].equals("interradio")) {
+                BUCKET_NAME = "rd-site-resources/interradio";
+            } else if (req.getServerName().split("\\.")[0].equals("right")) {
+                BUCKET_NAME = "rd-site-resources/right";
+            } else if (path.contains("/images/")) {
+                BUCKET_NAME = "rd-site-resources/images";
+                path = path.replace("/images/", "");
+            } else if (path.contains("/songs/")) {
+                BUCKET_NAME = "rd-site-resources/songs/";
+                path = path.replace("/mops/songs/", "");
+            } else if (path.contains("/assets")) {
+                BUCKET_NAME = "rd-site-resources/harkness/assets";
+                path = path.replace("/assets/", "");
+            } else {
+                BUCKET_NAME = "rd-site-resources";
+            }
 
-        GcsFilename fileName = getFileNameFromPath(path);
-        String h = "text/"+ fileName.getObjectName().substring(fileName.getObjectName().lastIndexOf('.') + 1);
-        if (h.contains("m4a")) {
-            h = "audio/x-m4a";
+            GcsFilename fileName = getFileNameFromPath(path);
+            String h = "text/" + fileName.getObjectName().substring(fileName.getObjectName().lastIndexOf('.') + 1);
+            if (h.contains("m4a")) {
+                h = "audio/x-m4a";
+            }
+            if (h.contains("wav")) {
+                h = "audio/wav";
+            }
+            if (h.contains("mp3")) {
+                h = "application/octet-stream";
+            }
+            rsp.addHeader("Content-Type", h);
+            GcsInputChannel readChannel = gcsService.openPrefetchingReadChannel(fileName, 0, BUFFER_SIZE);
+            copy(Channels.newInputStream(readChannel), rsp.getOutputStream());
         }
-        if (h.contains("wav")) {
-            h = "audio/wav";
-        }
-        if (h.contains("mp3")) {
-            h = "application/octet-stream";
-        }
-        rsp.addHeader("Content-Type", h);
-        GcsInputChannel readChannel = gcsService.openPrefetchingReadChannel(fileName, 0, BUFFER_SIZE);
-        copy(Channels.newInputStream(readChannel), rsp.getOutputStream());
     }
 
     public void doPost(HttpServletRequest req, HttpServletResponse rsp) throws ServletException, IOException {

@@ -1,0 +1,236 @@
+/* CSS Document */
+#outer_body {
+  background-color: #42AFCB;
+  display: flex;
+  justify-content: center;
+  align-content: center;
+  padding: 0px;
+
+  height: 100%;
+}
+
+#inner_body {
+  background-color: #92B9CA;
+  flex-grow: 1;
+
+  margin: 34px;
+
+  display: flex;
+}
+
+#toolbar {
+  background-color: #707D7A;
+  width: 68px;
+
+  display: flex;
+  flex-direction: column;
+}
+
+#profile_pic {
+  height: 68px;
+}
+
+.clip-circle {
+  clip-path: circle(30px at center);
+}
+
+#signout {
+  height: 68px;
+  background-color: #707D7A;
+
+  color: #E03726;
+  font-family: "Segoe UI Semibold";
+  font-size: 16px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+#signin {
+  height: 68px;
+  background-color: #707D7A;
+
+  color: #E03726;
+  font-family: "Segoe UI Semibold";
+  font-size: 16px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+#signin:hover {
+  background-color: #92B9CA;
+  cursor: pointer;
+}
+
+#signout:hover {
+  background-color: #92B9CA;
+  cursor: pointer;
+}
+
+#inner_content {
+  flex-grow: 1;
+
+  display: flex;
+  flex-direction: column;
+}
+
+#page_title {
+  margin-top: 68px;
+  margin-left: 68px;
+
+  color: #FFFFFF;
+
+  font-family: Segoe, "Segoe UI", "DejaVu Sans", "Trebuchet MS", Verdana, "sans-serif";
+  font-size: 64px;
+}
+
+#boxes {
+  flex-grow: 1;
+
+  display: flex;
+
+  margin-left: 68px;
+  margin-right: 68px;
+  margin-top: 34px;
+}
+
+#song_box {
+  background-color: #FFFFFF;
+  width: 50%;
+  margin-right: 34px;
+}
+
+#info_box {
+  background-color: #FFFFFF;
+  width: 50%;
+  margin-left: 34px;
+}
+
+#s_title {
+  color: #E03726;
+  font-family: "Segoe UI Semibold";
+  font-size: 32px;
+
+  margin-left: 16px;
+  margin-top: 8px;
+}
+
+#s_content {
+
+}
+
+.s_song {
+  background-color: #707D7A;
+
+  font-family: "Segoe UI Semibold";
+  font-size: 24px;
+
+  margin: 8px;
+
+  padding-left: 8px;
+  padding-right: 8px;
+
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+#i_title {
+  color: #E03726;
+  font-family: "Segoe UI Semibold";
+  font-size: 32px;
+
+  margin-left: 16px;
+  margin-top: 8px;
+  margin-right: 16px;
+
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.i_msg {
+  font-family: "Segoe UI Semibold";
+  font-size: 24px;
+
+  margin: 8px;
+
+  padding-left: 8px;
+  padding-right: 8px;
+
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+#player {
+  margin-left: 68px;
+  margin-right: 68px;
+  margin-top: 34px;
+  margin-bottom: 34px;
+  background-color: #FFFFFF;
+
+  height: 128px;
+}
+
+#upload_c {
+  display: flex;
+}
+
+#u_title {
+  color: #E03726;
+  font-family: "Segoe UI Semibold";
+  font-size: 32px;
+
+  margin-left: 16px;
+  margin-top: 8px;
+  margin-right: 16px;
+  margin-bottom: 8px;
+}
+
+#picker {
+  display: flex;
+  flex-direction: column;
+
+  justify-content: space-between;
+  align-items: center;
+
+  margin-left: 16px;
+}
+
+#label {
+  appearance: button;
+  padding-top: 2px;
+  padding-bottom: 2px;
+  padding-right: 5px;
+  padding-left: 5px;
+}
+
+#label:hover {
+  background-color: #42AFCB;
+  color: white;
+}
+
+#label:active {
+  background-color: #92B9CA;
+  color: white;
+}
+
+#namer {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+  margin-left: 0px;
+}
+
+#uploader {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin-left: 32px;
+}

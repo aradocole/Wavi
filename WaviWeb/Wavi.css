@@ -41,7 +41,6 @@ html, body {
 }
 
 #boxes {
-	background-color: #000000;
 	flex-grow: 1;
 	
 	display: flex;

@@ -1,0 +1,76 @@
+<div id="outer_body">
+<div id="inner_body">
+  <div id="toolbar">
+    <div id="profile_pic">
+      <img [src]="user.picture_URL" class="clip-circle" width="68px" height="68px">
+    </div>
+    <div id="signout" (click)="signedOut.emit()">
+      <div>Sign</div>
+      <div>Out</div>
+    </div>
+    <div id="signin" (click)="signedIn.emit()">
+      <div>Sign</div>
+      <div>In</div>
+    </div>
+  </div>
+  <div id="inner_content">
+    <div id="page_title">
+      Wavi Web Player
+    </div>
+    <div id="boxes">
+      <div id="song_box">
+        <div id="s_title">
+          Your Songs
+        </div>
+        <div id="s_content">
+          <div class="s_song" *ngFor="let song of user.songNames">
+            <div>
+              {{song}}
+            </div>
+            <button (click)="playSong(user.songURLS[user.songNames.indexOf(song)])">
+              Play
+            </button>
+          </div>
+        </div>
+      </div>
+      <div id="info_box">
+        <div id="i_title">
+          Info
+          <progress [value]="prog" max="100"></progress>
+        </div>
+        <div id="i_content">
+          <div class="i_msg" *ngFor="let msg of messages">
+            {{msg}}
+          </div>
+        </div>
+      </div>
+    </div>
+    <div id="player">
+      <div id="u_title">
+        Upload
+      </div>
+      <div id="upload_c">
+        <div id="picker">
+          <div></div>
+          <label for="song" id="label">Choose a File to Upload</label>
+          <input type="file" id="song" (change)="onFileChange($event)" #fileInput hidden="true">
+          {{fileName}}
+          <button (click)="clearFile()">Clear File</button>
+          <div></div>
+        </div>
+        <div id="namer">
+          <div></div>
+          <div>
+            Name Your Song!
+          </div>
+          <input #textbox type="text" [(ngModel)]="songName" required>
+          <div></div>
+        </div>
+        <div id="uploader">
+          <button (click)="upload()">Upload <br>&<br>Convert</button>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+</div>
